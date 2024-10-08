@@ -43,3 +43,7 @@ sysinfo.txt
 .DS_Store
 Elemental-Odyssey/.DS_Store
 .DS_Store
+
+# Ignore Visual Studio folder
+.vs/
+Elemental-Odyssey/.vs/

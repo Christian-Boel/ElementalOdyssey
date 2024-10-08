@@ -6,6 +6,8 @@ public class Attack : MonoBehaviour
 {
 
     public GameObject AO;
+    public Vector3 CursorDirection;
+    public float range;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +21,11 @@ public class Attack : MonoBehaviour
         {
             var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             mousePos.z = 0;
-            Instantiate(AO, mousePos, Quaternion.identity);
+
+            Vector3 mouseVector = mousePos - transform.position;
+
+            CursorDirection = mouseVector.normalized;
+            Instantiate(AO, transform.position + CursorDirection * range, Quaternion.identity);
         }
     }
 }
