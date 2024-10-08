@@ -7,6 +7,7 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float MSSpeed = 1.0f;
     private Rigidbody2D rb;
+    public GameObject CollisionTest;
     // Start is called before the first frame update
     void Start()
     {

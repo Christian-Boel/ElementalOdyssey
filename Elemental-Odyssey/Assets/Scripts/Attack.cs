@@ -25,7 +25,11 @@ public class Attack : MonoBehaviour
             Vector3 mouseVector = mousePos - transform.position;
 
             CursorDirection = mouseVector.normalized;
-            Instantiate(AO, transform.position + CursorDirection * range, Quaternion.identity);
+
+            float angle = Mathf.Atan2(CursorDirection.y, CursorDirection.x) * Mathf.Rad2Deg;
+
+            Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle+90));
+            Instantiate(AO, transform.position + CursorDirection * range, rotation);
         }
     }
 }
