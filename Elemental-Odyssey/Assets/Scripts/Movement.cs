@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
 
-    [SerializeField] private float MSSpeed = 1.0f;
+    [SerializeField] private float MSSpeed = 5f;
     private Rigidbody2D rb;
     public GameObject CollisionTest;
     // Start is called before the first frame update
