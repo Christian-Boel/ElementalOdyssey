@@ -10,10 +10,11 @@ public class FollowPlayer : MonoBehaviour
 
     private void Start()
     {
-        playerPosition = player.GetComponent<Transform>().position;
     }
     void Update()
     {
+        playerPosition = player.GetComponent<Transform>().position;
+
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, playerPosition, smoothSpeed);
 
         smoothedPosition.z = -10f;

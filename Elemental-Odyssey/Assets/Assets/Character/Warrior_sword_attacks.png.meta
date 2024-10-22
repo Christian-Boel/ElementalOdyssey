@@ -1,0 +1,2072 @@
+fileFormatVersion: 2
+guid: ca8e4113bf5c63a40a53a4ecdaf050c5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 345
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866f0b226177b8d41b2b9199573e8e39
+      internalID: 984433918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 345
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd123546cfe6a445a17f0ea27741758
+      internalID: 418688292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 329
+        width: 49
+        height: 52
+      alignment: 9
+      pivot: {x: 0.14322959, y: 0.6432777}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c996d4e3bc034ec428f9eeca655fc4a2
+      internalID: 371529331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_3
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 329
+        width: 23
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe6a226450afd64f913aef31b3f1370
+      internalID: -1224717685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_4
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 329
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3758de1c34d0ca45850695d6654300b
+      internalID: 1480339826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_5
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 333
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d0a48c19e46fb4bbdfb9c2b5dd9048
+      internalID: 555903833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_6
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 372
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9c6467337074246b8930f666b6477e
+      internalID: 1539623314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_7
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 360
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d99e0ef08c96e4ead8294151bcfcef
+      internalID: -137477580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_8
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 336
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65fbbbd30a103134eb7ded784f76e61c
+      internalID: -786494836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_9
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 328
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a7b9c1ada48fb4da6542f163794f45
+      internalID: 626754633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_10
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 330
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f4bd7e2840d7042b573ada29995f43
+      internalID: -8947657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_11
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 328
+        width: 58
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee66dbb17d75ed34380469832beadb28
+      internalID: -1874323260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_12
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 345
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578c7661aef6ea64098fb58156b292bf
+      internalID: -96898970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_13
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 327
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f545ec57d1b6bce4d85353c5a4b750f7
+      internalID: 117948661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_14
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 345
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4502df9fecbdda54c88d4f4298ec6d8e
+      internalID: -2076316225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_15
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 334
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9adfa9abf3537846befe8ed37208855
+      internalID: -1555182769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_16
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 378
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2956c3f845644054b9cd9e6317a38345
+      internalID: -932281240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_17
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 366
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d580bf7fd56618a4183af162158fd108
+      internalID: 538048832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_18
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 342
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce04c586ec91db4e9b03d312abdde14
+      internalID: -1520840248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_19
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 335
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706689676b4021b4b8064b4bc63fa64e
+      internalID: 864479734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_20
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 338
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 074ad14977a658e4aa74ec439a7193a2
+      internalID: 749226068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_21
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 329
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b2912e5d405e34baab309a2d0b3221
+      internalID: 45857594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_22
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 265
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f644739104a79c147a23abd4e6692b37
+      internalID: 1905418446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_23
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 265
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea63289e95cdee2439a2cbc0af51b734
+      internalID: 1338549226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_24
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 249
+        width: 49
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8733d0dc1ced00247adde917d22a51ad
+      internalID: 542804119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_25
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 249
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536b169f1d7593e498187a49c0c1cdb1
+      internalID: -103159719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_26
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 248
+        width: 23
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd9d28163a941943a1fbb75d9fe8be9
+      internalID: 73745700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_27
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 256
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c901b3fe303c514aa5c7b6b59f1b6e7
+      internalID: 523310257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_28
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 280
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb3859c0d1797c4cb1d74b7e3912804
+      internalID: 1388442254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_29
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 292
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620aae697ba0eed4a8c7590602c73805
+      internalID: -1416235037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_30
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 248
+        width: 30
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea036bcce19bc448a4f1aef751338d7
+      internalID: -954318359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_31
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 247
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b5a83fad6c9ef43b4b9b87012a20b3
+      internalID: 2025024130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_32
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 259
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4e65c7ed84b8243836faca30188c82
+      internalID: -1504522757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_33
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 252
+        width: 58
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5807a84424289bc47b7f8e77ebb4b7d6
+      internalID: 1799936110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_34
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 253
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa0f0967006be44986fcd8aa4352c26
+      internalID: 862302950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_35
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 265
+        width: 33
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed7deb8ffc475944d98c65e56d9ad7dc
+      internalID: -1893270754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_36
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 262
+        width: 5
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31dd85de6204b994e97e8face561843e
+      internalID: -542587143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_37
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 286
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8c5bed7c172014487cb70c16368188
+      internalID: 585758409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_38
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 298
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e11734a9ab16c4e9c3513f7dae824e
+      internalID: 2051323059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_39
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 254
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0acd97dceea32d4ab799d9805c9dcc6
+      internalID: 2114706028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_40
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 265
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c334da63ae741924ab42a35ca1477f70
+      internalID: 432174622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_41
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 258
+        width: 20
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86f64fddd7403f4a82a979891d2cdb4
+      internalID: 414480668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_42
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 255
+        width: 33
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7c332c3589ada4b89519c8c345a828
+      internalID: -803001904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_43
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 249
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442852a94b45dab4095ad1e0c1d472b4
+      internalID: -582568948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_44
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 185
+        width: 25
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a240b09a70cf554687a68527f74de52
+      internalID: 152055289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_45
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 185
+        width: 18
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef349674f85710949a04d454212afb27
+      internalID: 1611310430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_46
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 164
+        width: 55
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3091d95b000544b9ca0844155585da
+      internalID: 1176148304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_47
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 116
+        width: 55
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d7fa2bad78f5a4ba122e347a8e9d66
+      internalID: 1809521407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_48
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 183
+        width: 37
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a821d94a88294c448a69e3293c1abad
+      internalID: -934094372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_49
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 123
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e225f39d263925458f66f848ec737cd
+      internalID: 2062331831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_50
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 162
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f68da8cd6e13e4c9ded78e82bd8543
+      internalID: 527339395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_51
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 184
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad03f7a32f12988499502bbcd97fe1a9
+      internalID: -1900426568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_52
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 144
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504b414f32413dd41b8fd05f3b5b24d0
+      internalID: 1517959804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_53
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 174
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b0fe7db2c9468b488632e3c1567bbf8
+      internalID: 318046399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_54
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 161
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518ecc6124a327647931e85d3a980a9d
+      internalID: 610859907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_55
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 147
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ece5f661f1c8f478f16fceacb6a878
+      internalID: 459120626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_56
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 185
+        width: 38
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5784b9b795e72f34e8560baa7c147082
+      internalID: -565678583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_57
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 162
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8e648a93343d1d41b92daca3dfd963a
+      internalID: -1870993821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_58
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 134
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b1b51683a11f84aa06ce1bc6be7e8f
+      internalID: -1155506482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_59
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 140
+        width: 60
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7f74fad1957b144bdf85c0952aa904
+      internalID: -1012708351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_60
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 158
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7548580d43582b04eb965b2b82c91c99
+      internalID: -610118111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_61
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 164
+        width: 55
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d49d2d1c20a1c4db52aa61da3dc120
+      internalID: -525839597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_62
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 116
+        width: 55
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4b103779613ba4ea819987f28e831f
+      internalID: -1675819170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_63
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 185
+        width: 23
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f3e79e4b3577c49982188155b835ae
+      internalID: 927982136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_64
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 162
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3c376567a1a4b48a60145e6ca011af
+      internalID: -759449271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_65
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 123
+        width: 55
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865dfc573478ab04daa77d93c5ce6d20
+      internalID: 1257930598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_66
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 185
+        width: 25
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 930df1add5b8a9549ba1be504784f710
+      internalID: -1161856743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_67
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 174
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfc791c146e1504cad2267049fb7caa
+      internalID: -771367101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_68
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 161
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c050088337436e4fac122d233ee5bf3
+      internalID: 1127097182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_69
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 134
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e7b797fe20f674e9f02fcebcfe5d9f
+      internalID: -1011078437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_70
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 147
+        width: 33
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38cfd0db472fa7145b1576f448c0205d
+      internalID: 1074249630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_71
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 185
+        width: 24
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcb3833abf48d94ab6355e0c7f08ce6
+      internalID: -784521444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_72
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 162
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6118c0e2369e9c4ab83694bb2addb9b
+      internalID: 1982263978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_73
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 144
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adaa407f6bba9b44eae99d72d9c53bd3
+      internalID: 527292975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_74
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 140
+        width: 62
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7b94c527992c3459dc6f08e7a424d3
+      internalID: 1743848232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_75
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 105
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd74f6aa8bbe14049b8e90f2697aeddc
+      internalID: -44393908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_76
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 105
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea4f6ae50e394a4ca26aceb94145ff3
+      internalID: 1951421294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_77
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 105
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a0dbaf004969840a07803bec6282ec
+      internalID: -517640804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_78
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 105
+        width: 37
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58da21ca0484c1e4b8180c0c75275249
+      internalID: 1761683481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_79
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 105
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d218d70aff852f84b8db12b94d7eba6f
+      internalID: -1116242459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_80
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 105
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a1c01ac7f46554babd538bc9dc4eac
+      internalID: 552523499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_81
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 105
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828ec3f5c17d9c24694b858a042d4ece
+      internalID: 896538666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_82
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 105
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e7e9fd21583c1448804fb6239489a5
+      internalID: 416431419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_83
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 105
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ff98b59bce37743ab3c8e638e70f53
+      internalID: 1062284365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_84
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 105
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04342d9f66c8fd0488c5a064edc14840
+      internalID: -1363558672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_85
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 6
+        width: 45
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057682b3a96ff814ba0b6bae5e18037e
+      internalID: -982418192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_86
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 3
+        width: 61
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 440c338a01629fc4f91f5e286c57cd74
+      internalID: 1519898441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_87
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 8
+        width: 48
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cfe11bfc05ead469afc4884d4a7215
+      internalID: -384072432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Warrior_sword_attacks_88
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 25
+        width: 62
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38506681b07a1a428540a3d0aacfa41
+      internalID: -1507939388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Warrior_sword_attacks_0: 984433918
+      Warrior_sword_attacks_1: 418688292
+      Warrior_sword_attacks_10: -8947657
+      Warrior_sword_attacks_11: -1874323260
+      Warrior_sword_attacks_12: -96898970
+      Warrior_sword_attacks_13: 117948661
+      Warrior_sword_attacks_14: -2076316225
+      Warrior_sword_attacks_15: -1555182769
+      Warrior_sword_attacks_16: -932281240
+      Warrior_sword_attacks_17: 538048832
+      Warrior_sword_attacks_18: -1520840248
+      Warrior_sword_attacks_19: 864479734
+      Warrior_sword_attacks_2: 371529331
+      Warrior_sword_attacks_20: 749226068
+      Warrior_sword_attacks_21: 45857594
+      Warrior_sword_attacks_22: 1905418446
+      Warrior_sword_attacks_23: 1338549226
+      Warrior_sword_attacks_24: 542804119
+      Warrior_sword_attacks_25: -103159719
+      Warrior_sword_attacks_26: 73745700
+      Warrior_sword_attacks_27: 523310257
+      Warrior_sword_attacks_28: 1388442254
+      Warrior_sword_attacks_29: -1416235037
+      Warrior_sword_attacks_3: -1224717685
+      Warrior_sword_attacks_30: -954318359
+      Warrior_sword_attacks_31: 2025024130
+      Warrior_sword_attacks_32: -1504522757
+      Warrior_sword_attacks_33: 1799936110
+      Warrior_sword_attacks_34: 862302950
+      Warrior_sword_attacks_35: -1893270754
+      Warrior_sword_attacks_36: -542587143
+      Warrior_sword_attacks_37: 585758409
+      Warrior_sword_attacks_38: 2051323059
+      Warrior_sword_attacks_39: 2114706028
+      Warrior_sword_attacks_4: 1480339826
+      Warrior_sword_attacks_40: 432174622
+      Warrior_sword_attacks_41: 414480668
+      Warrior_sword_attacks_42: -803001904
+      Warrior_sword_attacks_43: -582568948
+      Warrior_sword_attacks_44: 152055289
+      Warrior_sword_attacks_45: 1611310430
+      Warrior_sword_attacks_46: 1176148304
+      Warrior_sword_attacks_47: 1809521407
+      Warrior_sword_attacks_48: -934094372
+      Warrior_sword_attacks_49: 2062331831
+      Warrior_sword_attacks_5: 555903833
+      Warrior_sword_attacks_50: 527339395
+      Warrior_sword_attacks_51: -1900426568
+      Warrior_sword_attacks_52: 1517959804
+      Warrior_sword_attacks_53: 318046399
+      Warrior_sword_attacks_54: 610859907
+      Warrior_sword_attacks_55: 459120626
+      Warrior_sword_attacks_56: -565678583
+      Warrior_sword_attacks_57: -1870993821
+      Warrior_sword_attacks_58: -1155506482
+      Warrior_sword_attacks_59: -1012708351
+      Warrior_sword_attacks_6: 1539623314
+      Warrior_sword_attacks_60: -610118111
+      Warrior_sword_attacks_61: -525839597
+      Warrior_sword_attacks_62: -1675819170
+      Warrior_sword_attacks_63: 927982136
+      Warrior_sword_attacks_64: -759449271
+      Warrior_sword_attacks_65: 1257930598
+      Warrior_sword_attacks_66: -1161856743
+      Warrior_sword_attacks_67: -771367101
+      Warrior_sword_attacks_68: 1127097182
+      Warrior_sword_attacks_69: -1011078437
+      Warrior_sword_attacks_7: -137477580
+      Warrior_sword_attacks_70: 1074249630
+      Warrior_sword_attacks_71: -784521444
+      Warrior_sword_attacks_72: 1982263978
+      Warrior_sword_attacks_73: 527292975
+      Warrior_sword_attacks_74: 1743848232
+      Warrior_sword_attacks_75: -44393908
+      Warrior_sword_attacks_76: 1951421294
+      Warrior_sword_attacks_77: -517640804
+      Warrior_sword_attacks_78: 1761683481
+      Warrior_sword_attacks_79: -1116242459
+      Warrior_sword_attacks_8: -786494836
+      Warrior_sword_attacks_80: 552523499
+      Warrior_sword_attacks_81: 896538666
+      Warrior_sword_attacks_82: 416431419
+      Warrior_sword_attacks_83: 1062284365
+      Warrior_sword_attacks_84: -1363558672
+      Warrior_sword_attacks_85: -982418192
+      Warrior_sword_attacks_86: 1519898441
+      Warrior_sword_attacks_87: -384072432
+      Warrior_sword_attacks_88: -1507939388
+      Warrior_sword_attacks_9: 626754633
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
