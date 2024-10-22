@@ -6,17 +6,16 @@ public class PlayerStats : MonoBehaviour
 {
     public int maxHealth = 1000;
     public int currentHealth;
-    
-    private HealthBar healthBar;
+    public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+
         if (healthBar != null)
         {
-            healthBar.maxHealth = maxHealth;
-            healthBar.SetHealth(currentHealth);
+            healthBar.SetHealth(currentHealth, maxHealth);
         }
     }
 
@@ -26,7 +25,11 @@ public class PlayerStats : MonoBehaviour
         Debug.Log("Player Health: " + currentHealth);
         if (healthBar != null)
         {
-            healthBar.SetHealth(currentHealth);
+            healthBar.SetHealth(currentHealth, maxHealth);
+        }
+        else
+        {
+            Debug.Log("Healthbar not found");
         }
         if (currentHealth <= 0)
         {

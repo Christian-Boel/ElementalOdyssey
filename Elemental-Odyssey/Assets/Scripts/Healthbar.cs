@@ -1,10 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour
 {
     public Image greenBarImage; // Reference to the green bar Image component
-    public int maxHealth = 100; // The player's maximum health
+    public int maxHealth = 1000;
 
     private float originalWidth; // Original width of the green bar
     private RectTransform greenBarRect;
@@ -16,10 +17,15 @@ public class HealthBar : MonoBehaviour
             greenBarRect = greenBarImage.GetComponent<RectTransform>();
             // Store the original width of the green bar
             originalWidth = greenBarRect.rect.width;
+            
+        }
+        else
+        {
+            Debug.LogError("Green Bar Image is not assigned.");
         }
     }
-
-    public void SetHealth(int currentHealth)
+    
+    public void SetHealth(int currentHealth, int maxHealth)
     {
         if (greenBarRect != null)
         {
@@ -31,6 +37,11 @@ public class HealthBar : MonoBehaviour
 
             // Adjust the width of the green bar
             greenBarRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, originalWidth * healthPercent);
+            Debug.Log("Test");
+        }
+        else
+        {
+            Debug.LogError("Green Bar RectTransform is not assigned.");
         }
     }
 }
