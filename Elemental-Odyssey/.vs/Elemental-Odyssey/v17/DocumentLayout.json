@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\animationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\animationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\followplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\assets\\followplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\followplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +46,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "AnimationManager.cs",
+              "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\AnimationManager.cs",
+              "RelativeDocumentMoniker": "Assets\\AnimationManager.cs",
+              "ToolTip": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\AnimationManager.cs",
+              "RelativeToolTip": "Assets\\AnimationManager.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADYAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-22T08:25:14.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FollowPlayer.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\FollowPlayer.cs",
               "RelativeDocumentMoniker": "Assets\\FollowPlayer.cs",
@@ -50,12 +67,11 @@
               "RelativeToolTip": "Assets\\FollowPlayer.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T09:45:56.228Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-08T09:45:56.228Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Damage.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\Damage.cs",
               "RelativeDocumentMoniker": "Assets\\Damage.cs",
@@ -67,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Movement.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\Scripts\\Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Movement.cs",
@@ -80,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Attack.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\Scripts\\Attack.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Attack.cs",
@@ -92,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Movement.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\Movement.cs",
               "RelativeDocumentMoniker": "Assets\\Movement.cs",

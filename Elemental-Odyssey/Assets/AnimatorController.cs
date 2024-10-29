@@ -16,28 +16,32 @@ public class AnimatorController : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        anim.Play("Base Layer.South.Idle", 0, 1f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity == Vector2.zero) suffix = "Idle";
-        else if (rb.velocity.y >= runningMin || rb.velocity.y <= -runningMin || rb.velocity.x >= runningMin || rb.velocity.x <= -runningMin) suffix = "Run";
-        else suffix = "Walking";
+        anim.SetBool("North", false);
+        anim.SetBool("South", false);
+        anim.SetBool("East", false);
+        anim.SetBool("West", false);
+        if (rb.velocity == Vector2.zero) anim.SetBool("Moving", false);
+        else anim.SetBool("Moving", true);
+        if (rb.velocity.y >= runningMin || rb.velocity.y <= -runningMin || rb.velocity.x >= runningMin || rb.velocity.x <= -runningMin) anim.SetBool("Running", true);
+        else anim.SetBool("Running", false);
         float x = Mathf.Abs(rb.velocity.x);
         float y = Mathf.Abs(rb.velocity.y);
         if(suffix != "Idle")
         {
             if(x > y)
             {
-                if (rb.velocity.x > 0) prefix = "East";
-                else prefix = "West";
+                if (rb.velocity.x > 0) anim.SetBool("East", true);
+                else anim.SetBool("West", true);
             }
             else
             {
-                if (rb.velocity.y > 0) prefix = "North";
-                else prefix = "South";
+                if (rb.velocity.y > 0) anim.SetBool("North", true);
+                else anim.SetBool("South", true);
             }
         }
         string clip = "Base Layer." + prefix + "." + suffix;
