@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Attack
+  - TestTag1
+  - TestTag2
+  - TestTag3
   layers:
   - Default
   - TransparentFX
