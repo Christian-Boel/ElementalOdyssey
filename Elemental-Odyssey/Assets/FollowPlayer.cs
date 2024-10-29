@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class FollowPlayer : MonoBehaviour
 {
-    public GameObject player;
-    private Vector3 playerPosition;
-    public float smoothSpeed = .1f;
-
-    private void Start()
+    public float smoothTime = .15f;
+    private Vector3 velocity = Vector3.zero;
+    public Transform target;
+    void LateUpdate()
     {
-    }
-    void Update()
-    {
-        playerPosition = player.GetComponent<Transform>().position;
+        Vector3 targetPosition = target.TransformPoint(new Vector3(0,0, -10));
 
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, playerPosition, smoothSpeed);
-
-        smoothedPosition.z = -10f;
-
-        transform.position = smoothedPosition;
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
 }
