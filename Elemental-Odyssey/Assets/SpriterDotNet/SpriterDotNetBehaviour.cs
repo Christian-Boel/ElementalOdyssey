@@ -46,7 +46,7 @@ namespace SpriterDotNetUnity
         [HideInInspector]
         public bool UseNativeTags;
 
-        public Animator Animator { get; private set; }
+        public UnityAnimator Animator { get; private set; }
 
         private string defaultTag;
 
@@ -55,7 +55,7 @@ namespace SpriterDotNetUnity
             SpriterEntity entity = SpriterData.Spriter.Entities[EntityIndex];
             AudioSource audioSource = gameObject.GetComponent<AudioSource>();
 
-            Animator = new Animator(entity, ChildData, audioSource);
+            Animator = new UnityAnimator(entity, ChildData, audioSource);
             RegisterSpritesAndSounds();
 
             if (UseNativeTags) defaultTag = gameObject.tag;

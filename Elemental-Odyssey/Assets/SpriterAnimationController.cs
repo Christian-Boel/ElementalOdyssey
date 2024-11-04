@@ -4,11 +4,11 @@ using SpriterDotNetUnity;
 public class SpriterAnimationController : MonoBehaviour
 {
     private SpriterDotNetBehaviour spriter;
-    public Animator animator;
+
+    private UnityAnimator animator;
     void Start()
     {
         spriter = GetComponent<SpriterDotNetBehaviour>();
-        animator = spriter.GetComponent<Animator>();
 
         if (spriter == null)
         {
@@ -16,21 +16,18 @@ public class SpriterAnimationController : MonoBehaviour
             return;
         }
 
-        Debug.Log("Available Animations:");
-        foreach (var anim in spriter.Animator.GetAnimations())
-        {
-            Debug.Log(anim);
-        }
+        animator = spriter.Animator;
 
-        if (spriter.Animator.HasAnimation("ATTACK"))
+        if (animator == null)
         {
-            spriter.Animator.Play("ATTACK");
-            Debug.Log("Playing ATTACK animation.");
+            Debug.LogError("Animator not found on SpriterDotNetBehaviour!");
         }
-        else
-        {
-            Debug.LogError("ATTACK animation not found!");
-        }
+    }
+
+    public void PlayAnimation(string animName)
+    {
+        if (animator == null) Debug.LogError("Animator not Found");
+        animator.Play(animName);
     }
 
 }
