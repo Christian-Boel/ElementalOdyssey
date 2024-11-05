@@ -8,10 +8,10 @@ public class Attack : MonoBehaviour
     private Movement playerMovement;
     private float aaSpeed = 0.767f;
     public float aaCD = 1;
+    public float attackDamage = 40;
     private bool attackReady = true;
     public GameObject attackObject;
-
-
+    
     private void Start()
     {
         aaCD += aaSpeed;
@@ -45,11 +45,13 @@ public class Attack : MonoBehaviour
 
         // Call the method on the other script, passing the angle
         animator.UpdateAttackState(angle);
-
-        yield return new WaitForSeconds(aaSpeed);
-        playerMovement.attacking = false;
+        yield return new WaitForSeconds(aaSpeed/2);
         angle = Mathf.Round(angle/90)*90;
-        Instantiate(attackObject, transform.position + new Vector3(0, 0.4f, 0), Quaternion.Euler(0, 0, angle));
+        GameObject gameObject = Instantiate(attackObject, transform.position + new Vector3(0, 0.4f, 0), Quaternion.Euler(0, 0, angle));
+        gameObject.GetComponent<Damage>().attackDamage = attackDamage;
+        
+        yield return new WaitForSeconds(aaSpeed/2);
+        playerMovement.attacking = false;
 
         yield return new WaitForSeconds(aaCD);
         attackReady = true;

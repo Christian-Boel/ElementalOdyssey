@@ -124,6 +124,7 @@ MonoBehaviour:
   speed: 2.5
   detectionRange: 6.5
   stoppingDistance: 1.5
+  hp: 100
 --- !u!58 &3303230804482051851
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -185,7 +186,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &2987739426788944031
 CircleCollider2D:
   m_ObjectHideFlags: 0
