@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class HitDetection : MonoBehaviour
 {
-
-    public IAttackedPossible enemyScript;
+    public IAttackedPossible hpScript;
     // Start is called before the first frame update
     void Start()
     {
-        
+        hpScript = GetComponentInParent<IAttackedPossible>();
     }
 
     // Update is called once per frame
@@ -20,6 +19,6 @@ public class HitDetection : MonoBehaviour
 
     public void Hit(float dmg)
     {
-        enemyScript.TakeDmg(dmg);
+        hpScript.TakeDmg(dmg);
     }
 }

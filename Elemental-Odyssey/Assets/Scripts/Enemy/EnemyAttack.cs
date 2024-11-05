@@ -77,7 +77,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (playerStats)
         {
-            playerStats.TakeDamage(attackDamageAmount);
+            playerStats.TakeDmg(attackDamageAmount);
             Debug.Log("Enemy performs a direct attack!");
         }
     }
@@ -91,7 +91,7 @@ public class EnemyAttack : MonoBehaviour
         {
             if (playerStats)
             {
-                playerStats.TakeDamage(aoeDamageAmount);
+                playerStats.TakeDmg(aoeDamageAmount);
                 Debug.Log("Enemy deals AoE damage!");
             }
 

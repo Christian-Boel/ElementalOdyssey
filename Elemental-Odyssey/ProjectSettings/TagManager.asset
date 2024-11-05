@@ -46,3 +46,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 2097339019
+    locked: 0
+  - name: RoofAestic
+    uniqueID: 357957163
+    locked: 0

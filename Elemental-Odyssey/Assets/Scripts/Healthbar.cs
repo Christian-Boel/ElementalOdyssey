@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Image greenBarImage; // Reference to the green bar Image component
-    public int maxHealth = 1000;
+    public float maxHealth = 1000;
 
     private float originalWidth; // Original width of the green bar
     private RectTransform greenBarRect;
@@ -25,12 +25,12 @@ public class HealthBar : MonoBehaviour
         }
     }
     
-    public void SetHealth(int currentHealth, int maxHealth)
+    public void SetHealth(float currentHealth, float maxHealth)
     {
         if (greenBarRect != null)
         {
             // Calculate the percentage of health remaining
-            float healthPercent = (float)currentHealth / maxHealth;
+            float healthPercent = currentHealth / maxHealth;
 
             // Ensure healthPercent is between 0 and 1
             healthPercent = Mathf.Clamp01(healthPercent);

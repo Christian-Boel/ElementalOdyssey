@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+public class PlayerStats : MonoBehaviour, IAttackedPossible
 {
-    public int maxHealth = 1000;
-    public int currentHealth;
+    public float maxHealth = 1000;
+    public float currentHealth;
     public HealthBar healthBar;
 
     // Start is called before the first frame update
@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int dmg)
+    public void TakeDmg(float dmg)
     {
         currentHealth -= dmg;
         Debug.Log("Player Health: " + currentHealth);
@@ -40,12 +40,5 @@ public class PlayerStats : MonoBehaviour
     public void Die()
     {
         Debug.Log("Player has died!");
-    }
-    
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
