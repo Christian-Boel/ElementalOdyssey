@@ -7,12 +7,22 @@ public class Damage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+         StartCoroutine(DestroyAfterOneFrame());
+    }
+    IEnumerator DestroyAfterOneFrame()
+    {
+        yield return new WaitForSeconds(.02f);
+
+        Destroy(this.gameObject);
+        Debug.Log("Attacked");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.CompareTag("Enemy"))
+        {
+            //If the collider is enemy
+            Debug.Log("Hit Enemy");
+        }
     }
 }

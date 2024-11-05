@@ -7,7 +7,8 @@ public class Movement : MonoBehaviour
 
     [SerializeField] private float MSSpeed = 5f;
     private Rigidbody2D rb;
-    public GameObject CollisionTest;
+    [HideInInspector] public bool attacking;
+    public float attackPenalty = .3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,6 +18,15 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * MSSpeed;
+        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
+        if(input.magnitude > 1)
+        {
+            input = input.normalized;
+        }
+
+        float attackSlowdown = attacking ? attackPenalty : 1f;
+
+        rb.velocity = input * MSSpeed *attackSlowdown;
     }
 }

@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class AnimatorController : MonoBehaviour
+public class PlayerAnimations : MonoBehaviour
 {
     [SerializeField] private enum DirectionState { North, South, East, West}
     [SerializeField] private DirectionState directionState = DirectionState.South;
@@ -207,7 +207,23 @@ public class AnimatorController : MonoBehaviour
 
     public void UpdateAttackState(float attackAngle)
     {
-
+        if (attackAngle >= -45 && attackAngle < 45)
+        {
+            anim.Play("Base Layer.Attacking.AttackingE");
+        }
+        else if (attackAngle >= 45 && attackAngle < 135)
+        {
+            anim.Play("Base Layer.Attacking.AttackingN");
+        }
+        else if (attackAngle >= 135 || attackAngle < -135)
+        {
+            anim.Play("Base Layer.Attacking.AttackingW");
+        }
+        else if (attackAngle >= -135 && attackAngle < -45)
+        {
+            anim.Play("Base Layer.Attacking.AttackingS");
+        }
+        lastEventTime = 0;
     }
 
     // Update is called once per frame
@@ -220,32 +236,5 @@ public class AnimatorController : MonoBehaviour
             movingAngle = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg;
             UpdateDirectionState();
         }
-
-
-
-
-
-
-        //if (rb.velocity == Vector2.zero) anim.SetBool("Moving", false);
-        //else anim.SetBool("Moving", true);
-        //if (rb.velocity.y >= runningMin || rb.velocity.y <= -runningMin || rb.velocity.x >= runningMin || rb.velocity.x <= -runningMin) anim.SetBool("Running", true);
-        //else anim.SetBool("Running", false);
-        //float x = Mathf.Abs(rb.velocity.x);
-        //float y = Mathf.Abs(rb.velocity.y);
-        //if(suffix != "Idle")
-        //{
-        //    if(x > y)
-        //    {
-        //        if (rb.velocity.x > 0) anim.SetBool("East", true);
-        //        else anim.SetBool("West", true);
-        //    }
-        //    else
-        //    {
-        //        if (rb.velocity.y > 0) anim.SetBool("North", true);
-        //        else anim.SetBool("South", true);
-        //    }
-        //}
-        //string clip = "Base Layer." + prefix + "." + suffix;
-        //if(!attacking)anim.Play(clip);
     }
 }
