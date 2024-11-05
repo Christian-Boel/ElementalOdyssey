@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Movement : MonoBehaviour, IAttackedPossible
 {
 
     [SerializeField] private float MSSpeed = 5f;
@@ -28,5 +28,10 @@ public class Movement : MonoBehaviour
         float attackSlowdown = attacking ? attackPenalty : 1f;
 
         rb.velocity = input * MSSpeed *attackSlowdown;
+    }
+
+    public void Hit(float dmg)
+    {
+        
     }
 }

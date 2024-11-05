@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5987111910675694075}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1900426568, guid: ca8e4113bf5c63a40a53a4ecdaf050c5, type: 3}
+  m_Sprite: {fileID: 1955422541, guid: 9ae253a089500da4eba23088b7e9ebbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MSSpeed: 5
-  CollisionTest: {fileID: 0}
   attacking: 0
+  attackPenalty: 0.3
 --- !u!50 &5876024747918104709
 Rigidbody2D:
   serializedVersion: 4
@@ -167,8 +167,8 @@ BoxCollider2D:
   m_Offset: {x: 0.000042319298, y: 0.00014170446}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.47368422, y: 0.49122807}
-    oldSize: {x: 0.57, y: 0.57}
+    pivot: {x: 0.5, y: 0.14285715}
+    oldSize: {x: 0.2, y: 0.35}
     newSize: {x: 0.2, y: 0.35}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
