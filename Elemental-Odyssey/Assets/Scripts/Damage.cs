@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
+    public float attackDamage = 10f;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,10 +20,10 @@ public class Damage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Hit Enemy");
         if (collision.CompareTag("Enemy"))
         {
-            //If the collider is enemy
-            Debug.Log("Hit Enemy");
+            collision.GetComponent<IAttackedPossible>().TakeDmg(attackDamage);
         }
     }
 }

@@ -22,7 +22,6 @@ public class PlayerStats : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
-        Debug.Log("Player Health: " + currentHealth);
         if (healthBar != null)
         {
             healthBar.SetHealth(currentHealth, maxHealth);

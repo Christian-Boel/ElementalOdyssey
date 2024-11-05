@@ -20,6 +20,7 @@ public class HitDetection : MonoBehaviour
 
     public void Hit(float dmg)
     {
+        Debug.Log("hitDetection - Hit called with dmg" + dmg);
         enemyScript.TakeDmg(dmg);
     }
 }

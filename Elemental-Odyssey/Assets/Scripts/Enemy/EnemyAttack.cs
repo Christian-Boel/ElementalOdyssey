@@ -1,31 +1,32 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
     // Attack type toggles
-    public bool useAoEDamage = true;    // Enable or disable AoE damage
-    public bool useDirectAttack = true; // Enable or disable direct attacks
+    public bool useAoEDamage = true;    
+    public bool useDirectAttack = true;
 
     // AoE damage settings
-    public int aoeDamageAmount = 2;        // Damage per AoE tick
-    public float aoeDamageInterval = 0.5f;    // Time between AoE damage ticks
-    public float aoeRange = 2f;             // Radius for AoE damage
-    private Coroutine aoeDamageCoroutine;   // Reference to the AoE damage coroutine
+    public int aoeDamageAmount = 2;
+    public float aoeDamageInterval = 0.5f;
+    public float aoeRange = 2f;       
+    private Coroutine aoeDamageCoroutine;
 
     // Direct attack settings
-    public int attackDamageAmount = 20;     // Damage per direct attack
-    public float attackCooldown = 2.5f;       // Time between direct attacks
-    public float attackRange = 1.5f;        // Range for direct attacks
-    private float attackTimer = 0f;         // Timer to track attack cooldown
-
-    // References
-    private Transform player;               // Player's transform
-    private PlayerStats playerStats;        // Player's stats script
-
+    public int attackDamageAmount = 20;  
+    public float attackCooldown = 2.5f;       
+    public float attackRange = 1.5f;       
+    private float attackTimer = 0f;        
+    
+    private Transform player;              
+    private PlayerStats playerStats;      
+    private EnemyScript enemyScript;
+    
     void Start()
     {
-        // Find the player
+        enemyScript = GetComponent<EnemyScript>();
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
@@ -75,10 +76,10 @@ public class EnemyAttack : MonoBehaviour
 
     void AttackPlayer()
     {
+        StartCoroutine(enemyScript.AttackAnimation());
         if (playerStats)
         {
             playerStats.TakeDamage(attackDamageAmount);
-            Debug.Log("Enemy performs a direct attack!");
         }
     }
 
@@ -92,7 +93,6 @@ public class EnemyAttack : MonoBehaviour
             if (playerStats)
             {
                 playerStats.TakeDamage(aoeDamageAmount);
-                Debug.Log("Enemy deals AoE damage!");
             }
 
             yield return new WaitForSeconds(aoeDamageInterval);

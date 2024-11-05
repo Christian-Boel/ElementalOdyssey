@@ -37,7 +37,6 @@ public class HealthBar : MonoBehaviour
 
             // Adjust the width of the green bar
             greenBarRect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, originalWidth * healthPercent);
-            Debug.Log("Test");
         }
         else
         {
