@@ -1,10 +1,11 @@
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+public class EnemyScript : MonoBehaviour, IAttackedPossible
 {
     public float speed = 2.5f;
     public float detectionRange = 6.5f;
     public float stoppingDistance = 1.5f; // Should match attackRange in EnemyAttack
+    public float hp = 100;
     private Transform player;
 
     void Start()
@@ -28,4 +29,9 @@ public class EnemyScript : MonoBehaviour
         }
         // Optionally, add idle or patrol behavior when not moving
     }
+
+    public void TakeDmg(float dmg)
+    {
+        hp -= dmg;
+    } 
 }

@@ -4,5 +4,8 @@ using UnityEngine;
 
 public interface IAttackedPossible
 {
-    void Hit(float dmg);
+    void TakeDmg(float dmg)
+    {
+        
+    }
 }

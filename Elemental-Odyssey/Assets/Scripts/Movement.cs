@@ -27,11 +27,6 @@ public class Movement : MonoBehaviour, IAttackedPossible
 
         float attackSlowdown = attacking ? attackPenalty : 1f;
 
-        rb.velocity = input * MSSpeed *attackSlowdown;
-    }
-
-    public void Hit(float dmg)
-    {
-        
+        rb.velocity =  MSSpeed * attackSlowdown * input ;
     }
 }
