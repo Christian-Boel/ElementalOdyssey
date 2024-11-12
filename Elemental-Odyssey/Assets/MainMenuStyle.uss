@@ -1,0 +1,24 @@
+.header {
+}
+
+.button {
+    font-size: 32px;
+    width: 300px;
+    height: 90px;
+    -unity-text-align: middle-center;
+    align-self: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-image: url("project://database/Assets/Assets/monster-character-2d-sprites/SCML/10/body.png?fileID=21300000&guid=e95ea8b853e1a4baf83408b746ffa655&type=3#body");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(56, 56, 56, 0);
+    -unity-font: initial;
+    color: rgb(0, 0, 0);
+    -unity-text-outline-width: 2px;
+    -unity-text-outline-color: rgba(0, 255, 8, 0);
+    -unity-font-style: bold;
+    justify-content: flex-start;
+    margin-top: 17px;
+}
