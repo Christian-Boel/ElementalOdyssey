@@ -12,8 +12,6 @@ public class PlayerAnimations : MonoBehaviour
 
     [SerializeField] private enum MovementState {Idle, Walking, Running}
     [SerializeField] private MovementState movementState = MovementState.Idle;
-    
-    [SerializeField] private AudioClip[] swordSlashSoundClips;
 
     public Vector2 velocity;
     private Animator anim;
@@ -225,8 +223,6 @@ public class PlayerAnimations : MonoBehaviour
         {
             anim.Play("Base Layer.Attacking.AttackingS");
         }
-        
-        SoundFXManager.instance.PlayRandomSoundFXClip(swordSlashSoundClips, transform, 1f);
         
         lastEventTime = 0;
     }
