@@ -22,9 +22,14 @@ public class EnemySpawner : MonoBehaviour
         // Find the player by tag
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject)
+        {
             player = playerObject.transform;
+        }
         else
+        { 
             Debug.LogError("Player not found in the scene.");
+        }
+
 
         // Ensure the collider matches the spawn radius
         CircleCollider2D collider = GetComponent<CircleCollider2D>();

@@ -35,7 +35,7 @@ public class EnemyAttack : MonoBehaviour
         }
 
         player = playerObject.transform;
-        playerStats = playerObject.GetComponent<PlayerStats>();
+        playerStats = playerObject.GetComponentInParent<PlayerStats>();
         if (!player)
         {
                 Debug.LogError("NO PLAYER FOUND");

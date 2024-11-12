@@ -13,7 +13,7 @@ public class EnemyScript : MonoBehaviour, IAttackedPossible
     private bool isFlashing = false;
     private Transform player;
     private SpriterAnimationController spriter;
-    
+
     void Start()
     {
         spriter = GetComponent<SpriterAnimationController>();
