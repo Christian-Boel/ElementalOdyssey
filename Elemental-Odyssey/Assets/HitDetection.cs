@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HitDetection : MonoBehaviour
 {
+    [SerializeField] private AudioClip damageSoundClip;
     public IAttackedPossible hpScript;
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,6 @@ public class HitDetection : MonoBehaviour
     public void Hit(float dmg)
     {
         hpScript.TakeDmg(dmg);
+        SoundFXManager.instance.PlaySoundFXClip(damageSoundClip, transform, 1f);
     }
 }

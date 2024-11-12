@@ -790,6 +790,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6404296739324120666, guid: d1c46ac5dbc48e64196aedb5a18e13b3, type: 3}
+      propertyPath: swordSlashSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e913801ecbbc7546b6fd5af44ce2211, type: 3}
+    - target: {fileID: 6404296739324120666, guid: d1c46ac5dbc48e64196aedb5a18e13b3, type: 3}
+      propertyPath: swordSlashSoundClips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404296739324120666, guid: d1c46ac5dbc48e64196aedb5a18e13b3, type: 3}
+      propertyPath: swordSlashSoundClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e913801ecbbc7546b6fd5af44ce2211, type: 3}
+    - target: {fileID: 6404296739324120666, guid: d1c46ac5dbc48e64196aedb5a18e13b3, type: 3}
+      propertyPath: swordSlashSoundClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8249e2272ccb6974bba8d76ed6c4c3db, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

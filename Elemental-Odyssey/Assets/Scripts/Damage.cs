@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Damage : MonoBehaviour
 {
+    [SerializeField] private AudioClip heroDamageSoundClip;
     public float attackDamage = 10f;
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class Damage : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponent<IAttackedPossible>().TakeDmg(attackDamage);
+            SoundFXManager.instance.PlaySoundFXClip(heroDamageSoundClip, transform, 1f); // play sound
         }
     }
 }
