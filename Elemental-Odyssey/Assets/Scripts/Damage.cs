@@ -25,7 +25,7 @@ public class Damage : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             collision.GetComponent<IAttackedPossible>().TakeDmg(attackDamage);
-            SoundFXManager.instance.PlaySoundFXClip(heroDamageSoundClip, transform, 1f); // play sound
+            // SoundFXManager.instance.PlaySoundFXClip(heroDamageSoundClip, transform, 1f); // play sound
         }
     }
 }
