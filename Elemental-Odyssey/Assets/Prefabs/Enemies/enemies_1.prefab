@@ -504,6 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78b871f8adc443858bc488ade821a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageSoundClip: {fileID: 0}
 --- !u!1 &3591263094409721006
 GameObject:
   m_ObjectHideFlags: 0

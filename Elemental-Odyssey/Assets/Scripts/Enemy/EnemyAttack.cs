@@ -28,10 +28,21 @@ public class EnemyAttack : MonoBehaviour
     {
         enemyScript = GetComponent<EnemyScript>();
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-        if (playerObject != null)
+        if (!playerObject)
         {
-            player = playerObject.transform;
-            playerStats = playerObject.GetComponent<PlayerStats>();
+            Debug.LogError("Player not found");
+            return;
+        }
+
+        player = playerObject.transform;
+        playerStats = playerObject.GetComponent<PlayerStats>();
+        if (!player)
+        {
+                Debug.LogError("NO PLAYER FOUND");
+        }
+        if (!playerStats)
+        {
+                Debug.LogError("NO PLAYER STATS FOUND");
         }
     }
 
@@ -76,12 +87,16 @@ public class EnemyAttack : MonoBehaviour
 
     void AttackPlayer()
     {
+        Debug.Log("Enemy - attack player");
         StartCoroutine(enemyScript.AttackAnimation());
-        if (playerStats)
+        
+        if (!playerStats)
         {
-            playerStats.TakeDmg(attackDamageAmount);
-            Debug.Log("Enemy performs a direct attack!");
+            Debug.LogError("Enemy - could not find playerstats!");
+            return;
         }
+        Debug.Log("Enemy performs a direct attack!");
+        playerStats.TakeDmg(attackDamageAmount);
     }
 
     IEnumerator DamagePlayerAoE()
