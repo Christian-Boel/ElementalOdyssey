@@ -10,6 +10,7 @@ TagManager:
   - TestTag3
   - Enemy
   - Healthbar
+  - Item
   layers:
   - Default
   - TransparentFX

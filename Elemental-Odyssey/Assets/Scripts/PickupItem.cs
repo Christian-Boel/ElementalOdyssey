@@ -4,6 +4,11 @@ public class PickupItem : MonoBehaviour
 {
     public GameManager gameManager;
 
+    private void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Item"))
