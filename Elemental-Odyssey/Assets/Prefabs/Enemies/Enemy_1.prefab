@@ -124,6 +124,7 @@ MonoBehaviour:
   detectionRange: 6.5
   stoppingDistance: 1.5
   hp: 50
+  hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
 --- !u!114 &-2823629021989091704
 MonoBehaviour:
   m_ObjectHideFlags: 0

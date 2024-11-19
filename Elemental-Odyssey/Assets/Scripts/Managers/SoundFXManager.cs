@@ -7,7 +7,7 @@ using Random = System.Random;
 
 public class SoundFXManager : MonoBehaviour
 {
-    public static SoundFXManager instance; //singleton with the Awake() func. 
+    public static SoundFXManager instance; //singleton 
     [SerializeField] private AudioSource soundFXObject;
     private void Awake()
     {
