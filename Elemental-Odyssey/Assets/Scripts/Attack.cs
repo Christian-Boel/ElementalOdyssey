@@ -6,7 +6,9 @@ public class Attack : MonoBehaviour
     // Reference to the script containing the method to call
     private PlayerAnimations animator;
     private Movement playerMovement;
+    public AnimationClip atkAni;
     private float aaSpeed = 0.767f;
+    public float aaSpeedMultiplier = 1f;
     public float aaCD = 1;
     public float attackDamage = 40;
     private bool attackReady = true;
@@ -14,9 +16,11 @@ public class Attack : MonoBehaviour
     
     private void Start()
     {
-        aaCD += aaSpeed;
+        aaSpeed = atkAni.length;
         animator = GetComponent<PlayerAnimations>();
         playerMovement = GetComponent<Movement>();
+        aaSpeed /= aaSpeedMultiplier;
+        animator.UpdateAttackAnimationSpeed(aaSpeedMultiplier); 
     }
     void Update()
     {

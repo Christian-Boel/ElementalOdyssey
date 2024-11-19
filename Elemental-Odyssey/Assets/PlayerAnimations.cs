@@ -14,7 +14,7 @@ public class PlayerAnimations : MonoBehaviour
     [SerializeField] private MovementState movementState = MovementState.Idle;
 
     public Vector2 velocity;
-    private Animator anim;
+    [SerializeField] private Animator anim;
     public float runningMin;
     private Rigidbody2D rb;
 
@@ -207,6 +207,7 @@ public class PlayerAnimations : MonoBehaviour
 
     public void UpdateAttackState(float attackAngle)
     {
+        if(superIdle) superIdle = false;
         if (attackAngle >= -45 && attackAngle < 45)
         {
             anim.Play("Base Layer.Attacking.AttackingE");
@@ -225,6 +226,11 @@ public class PlayerAnimations : MonoBehaviour
         }
         
         lastEventTime = 0;
+    }
+
+    public void UpdateAttackAnimationSpeed(float speed)
+    {
+        anim.SetFloat("aaSpeedMultiplier", speed);
     }
 
     // Update is called once per frame

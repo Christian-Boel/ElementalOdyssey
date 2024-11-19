@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour, IAttackedPossible
 
     [SerializeField] private float MSSpeed = 5f;
     private Rigidbody2D rb;
-    [HideInInspector] public bool attacking;
+    /*[HideInInspector]*/ public bool attacking;
     public float attackPenalty = .3f;
     // Start is called before the first frame update
     void Start()

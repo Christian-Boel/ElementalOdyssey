@@ -52,6 +52,12 @@ TagManager:
   - name: RoofAestic
     uniqueID: 357957163
     locked: 0
+  - name: Ground Obstacles
+    uniqueID: 2795269647
+    locked: 0
   - name: Platforms
     uniqueID: 301250221
+    locked: 0
+  - name: UI
+    uniqueID: 2342661285
     locked: 0
