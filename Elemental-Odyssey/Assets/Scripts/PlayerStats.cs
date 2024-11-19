@@ -8,21 +8,26 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     public float currentHealth;
     public HealthBar healthBar;
 
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
-
+        healthBar = GameObject.FindGameObjectWithTag("Healthbar").GetComponent<HealthBar>();
         if (healthBar != null)
         {
             healthBar.SetHealth(currentHealth, maxHealth);
         }
     }
 
+    public void Heal(float healAmount)
+    {
+        float newHealth = currentHealth + healAmount;
+        currentHealth = newHealth > maxHealth ? maxHealth : newHealth;
+    }
+    
     public void TakeDmg(float dmg)
     {
         currentHealth -= dmg;
-        if (healthBar != null)
+        if (healthBar)
         {
             healthBar.SetHealth(currentHealth, maxHealth);
         }

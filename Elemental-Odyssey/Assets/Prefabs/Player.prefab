@@ -80,6 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78b871f8adc443858bc488ade821a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageSoundClip: {fileID: 0}
 --- !u!1 &5470954820853414628
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,15 +92,15 @@ GameObject:
   - component: {fileID: 2441879968827253884}
   - component: {fileID: 8121938524132246118}
   - component: {fileID: 8199194135829847329}
+  - component: {fileID: 6915010313607650890}
   - component: {fileID: 5876024747918104709}
   - component: {fileID: 1584891743844650671}
   - component: {fileID: 6404296739324120666}
   - component: {fileID: 1715996285787930596}
-  - component: {fileID: 447308358188092491}
   - component: {fileID: 5987111910675694075}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,6 +188,21 @@ MonoBehaviour:
   MSSpeed: 5
   attacking: 0
   attackPenalty: 0.3
+--- !u!114 &6915010313607650890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5470954820853414628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c588d31654ad47a584271ee3a47818e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1000
+  currentHealth: 0
+  healthBar: {fileID: 0}
 --- !u!50 &5876024747918104709
 Rigidbody2D:
   serializedVersion: 4
@@ -274,6 +290,7 @@ MonoBehaviour:
   directionState: 1
   movementState: 0
   velocity: {x: 0, y: 0}
+  anim: {fileID: 0}
   runningMin: 4
   speed: 0
   idleTime: 10
@@ -298,21 +315,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &447308358188092491
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5470954820853414628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c588d31654ad47a584271ee3a47818e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1000
-  currentHealth: 0
-  healthBar: {fileID: 0}
 --- !u!114 &5987111910675694075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,5 +327,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90fd4463ace0ad468ee46fa9e407fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aaCD: 1
+  atkAni: {fileID: 7400000, guid: 92879807c7f1f1c4e84166b4c7392341, type: 2}
+  aaSpeedMultiplier: 1
+  aaCD: 0
+  attackDamage: 40
   attackObject: {fileID: 6502513703674564419, guid: db891f3f4f1e7e949ad7fb49df18cfba, type: 3}
+  swordSoundClips:
+  - {fileID: 8300000, guid: 2e913801ecbbc7546b6fd5af44ce2211, type: 3}
+  - {fileID: 8300000, guid: 8249e2272ccb6974bba8d76ed6c4c3db, type: 3}
