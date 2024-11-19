@@ -1117,7 +1117,7 @@ MonoBehaviour:
   aoeRange: 2.5
   attackDamageAmount: 150
   attackCooldown: 4
-  attackRange: 1.5
+  attackRange: 2.2
 --- !u!74 &-8321092890255158807
 AnimationClip:
   m_ObjectHideFlags: 0

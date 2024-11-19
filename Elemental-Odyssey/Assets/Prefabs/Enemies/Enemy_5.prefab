@@ -689,7 +689,7 @@ MonoBehaviour:
   aoeRange: 2
   attackDamageAmount: 100
   attackCooldown: 4
-  attackRange: 1.5
+  attackRange: 1.6
 --- !u!70 &5798420889677293041
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

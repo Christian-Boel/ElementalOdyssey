@@ -880,7 +880,7 @@ MonoBehaviour:
   aoeRange: 2
   attackDamageAmount: 100
   attackCooldown: 2
-  attackRange: 1.5
+  attackRange: 2.5
 --- !u!1 &8087365677441809495
 GameObject:
   m_ObjectHideFlags: 0
