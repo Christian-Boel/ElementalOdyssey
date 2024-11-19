@@ -9,7 +9,7 @@ public class Pickupscript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Key") || collision.CompareTag("Potion")) GameManager.handlepickup(collision.name);
+        //if(collision.CompareTag("Key") || collision.CompareTag("Potion")) GameManager.handlepickup(collision.name);
         Destroy(collision.gameObject);
     }
 }
