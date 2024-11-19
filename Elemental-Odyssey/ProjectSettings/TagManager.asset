@@ -9,6 +9,7 @@ TagManager:
   - TestTag2
   - TestTag3
   - Enemy
+  - Healthbar
   layers:
   - Default
   - TransparentFX
