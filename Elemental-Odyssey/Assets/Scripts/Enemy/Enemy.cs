@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour, IAttackedPossible
+public class Enemy : MonoBehaviour, IAttackedPossible
 {
     public float speed = 2.5f;
     public float detectionRange = 6.5f;
     public float stoppingDistance = 1.5f; // Should match attackRange in EnemyAttack
     public float hp = 30;
+    public EnemySpawner spawner;
     private List<SpriteRenderer> spriteRenderers = new List<SpriteRenderer>();
     private List<Color> originalColors = new List<Color>();
     private bool isFlashing = false;
     private Transform player;
     private SpriterAnimationController spriter;
+    [SerializeField] private AudioClip hurtSound;
 
     void Start()
     {
@@ -65,6 +67,7 @@ public class EnemyScript : MonoBehaviour, IAttackedPossible
         if (!isFlashing)
         {
             StartCoroutine(FlashRed());
+            SoundFXManager.instance.PlaySoundFXClip(hurtSound, transform, 0.5f);
         }
 
         if (hp <= 0)
@@ -123,6 +126,11 @@ public class EnemyScript : MonoBehaviour, IAttackedPossible
     IEnumerator DespawnObject()
     {
         yield return new WaitForSeconds(1f);
+        if (spawner)
+        {
+            spawner.OnEnemyDeath(this);
+        }
+        
         Destroy(this.gameObject);
     }
 }

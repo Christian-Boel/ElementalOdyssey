@@ -124,6 +124,7 @@ MonoBehaviour:
   detectionRange: 6.5
   stoppingDistance: 1.5
   hp: 50
+  hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
 --- !u!114 &-2823629021989091704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +144,7 @@ MonoBehaviour:
   aoeRange: 2
   attackDamageAmount: 10
   attackCooldown: 1
-  attackRange: 1.5
+  attackRange: 2
 --- !u!70 &2546791462343028555
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -176,8 +177,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16, y: 0.22}
-  m_Size: {x: 3.8794854, y: 6.0218554}
+  m_Offset: {x: 0.16000003, y: 1.2644613}
+  m_Size: {x: 3.8794854, y: 8.110781}
   m_Direction: 0
 --- !u!50 &760399604114179570
 Rigidbody2D:

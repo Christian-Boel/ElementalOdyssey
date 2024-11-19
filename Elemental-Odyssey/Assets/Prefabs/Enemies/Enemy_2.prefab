@@ -924,7 +924,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_LocalScale: {x: 0.16, y: 0.16, z: 0.16}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2299742022132445576}
@@ -1016,6 +1016,7 @@ MonoBehaviour:
   detectionRange: 6.5
   stoppingDistance: 1.5
   hp: 140
+  hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
 --- !u!114 &3854867375773415565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,8 +1069,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16, y: 0.22}
-  m_Size: {x: 3.8794854, y: 6.0218554}
+  m_Offset: {x: 0.1599999, y: 0.8582577}
+  m_Size: {x: 3.8794854, y: 9.967457}
   m_Direction: 0
 --- !u!50 &-8925597084182639076
 Rigidbody2D:

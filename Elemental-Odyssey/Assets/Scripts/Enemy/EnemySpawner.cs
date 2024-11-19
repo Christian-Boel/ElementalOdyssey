@@ -10,12 +10,16 @@ public class EnemySpawner : MonoBehaviour
     public float spawnRadius = 15f;     // Radius within which the spawner activates
     public float spawnInterval = 2f;    // Time interval between enemy spawns
     public float despawnDelay = 5f;     // Delay before despawning enemies after player exits radius
+    public bool shouldRespawn = true;   // Whether the spawner should respawn enemies
+    public float respawnDelay = 5f;     // Delay between enemy death and respawn
 
-    private List<GameObject> spawnedEnemies = new List<GameObject>(); // List to keep track of spawned enemies
+    private List<Enemy> spawnedEnemies = new List<Enemy>(); // List to keep track of spawned enemies
     private Transform player;
     private bool playerInRange = false;
     private Coroutine spawnCoroutine;
     private Coroutine despawnCoroutine;
+    private int pendingRespawns = 0;    // Count of enemies scheduled to respawn
+    private bool hasSpawnedInitialEnemies = false; // Tracks if initial enemies have been spawned
 
     void Start()
     {
@@ -29,7 +33,6 @@ public class EnemySpawner : MonoBehaviour
         { 
             Debug.LogError("Player not found in the scene.");
         }
-
 
         // Ensure the collider matches the spawn radius
         CircleCollider2D collider = GetComponent<CircleCollider2D>();
@@ -57,10 +60,26 @@ public class EnemySpawner : MonoBehaviour
                 despawnCoroutine = null;
             }
 
-            // Start spawning enemies if not already started
-            if (spawnCoroutine == null)
+            if (shouldRespawn)
             {
-                spawnCoroutine = StartCoroutine(SpawnEnemies());
+                // Start spawning enemies if not already started
+                if (spawnCoroutine == null)
+                {
+                    spawnCoroutine = StartCoroutine(SpawnEnemies());
+                }
+            }
+            else
+            {
+                // Spawn initial enemies only once
+                if (!hasSpawnedInitialEnemies)
+                {
+                    hasSpawnedInitialEnemies = true;
+                    // Spawn initial enemies up to maxEnemies
+                    for (int i = 0; i < maxEnemies; i++)
+                    {
+                        SpawnEnemy();
+                    }
+                }
             }
         }
     }
@@ -90,10 +109,15 @@ public class EnemySpawner : MonoBehaviour
     {
         while (playerInRange)
         {
-            if (spawnedEnemies.Count < maxEnemies)
+            // Clean up any null references (enemies that have been destroyed)
+            spawnedEnemies.RemoveAll(item => item == null);
+
+            // Only spawn new enemies if there's room and no pending respawns
+            if (spawnedEnemies.Count + pendingRespawns < maxEnemies)
             {
                 SpawnEnemy();
             }
+
             yield return new WaitForSeconds(spawnInterval);
         }
     }
@@ -101,8 +125,40 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy()
     {
         Vector2 spawnPosition = (Vector2)transform.position + Random.insideUnitCircle * 2f; // Random position around spawner
-        GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
-        spawnedEnemies.Add(enemy);
+        GameObject enemyObj = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        Enemy enemy = enemyObj.GetComponent<Enemy>();
+        if (enemy)
+        {
+            enemy.spawner = this;
+            spawnedEnemies.Add(enemy);
+        }
+        else
+        {
+            Debug.LogError("Spawned enemy does not have an Enemy script attached.");
+        }
+    }
+
+    public void OnEnemyDeath(Enemy enemy)
+    {
+        spawnedEnemies.Remove(enemy);
+
+        if (shouldRespawn && playerInRange)
+        {
+            pendingRespawns++;
+            StartCoroutine(RespawnEnemyAfterDelay(respawnDelay));
+        }
+    }
+
+    IEnumerator RespawnEnemyAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        pendingRespawns--;
+
+        if (playerInRange && spawnedEnemies.Count + pendingRespawns < maxEnemies)
+        {
+            SpawnEnemy();
+        }
     }
 
     IEnumerator DespawnEnemiesAfterDelay()
@@ -110,14 +166,15 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(despawnDelay);
 
         // Destroy all spawned enemies
-        foreach (GameObject enemy in spawnedEnemies)
+        foreach (Enemy enemy in spawnedEnemies)
         {
             if (enemy)
             {
-                Destroy(enemy);
+                Destroy(enemy.gameObject);
             }
         }
 
         spawnedEnemies.Clear();
+        pendingRespawns = 0; // Reset pending respawns when despawning
     }
 }

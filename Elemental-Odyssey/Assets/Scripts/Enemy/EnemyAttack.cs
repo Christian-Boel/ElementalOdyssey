@@ -22,11 +22,11 @@ public class EnemyAttack : MonoBehaviour
     
     private Transform player;              
     private PlayerStats playerStats;      
-    private EnemyScript enemyScript;
+    private Enemy _enemy;
     
     void Start()
     {
-        enemyScript = GetComponent<EnemyScript>();
+        _enemy = GetComponent<Enemy>();
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (!playerObject)
         {
@@ -88,7 +88,7 @@ public class EnemyAttack : MonoBehaviour
     void AttackPlayer()
     {
         Debug.Log("Enemy - attack player");
-        StartCoroutine(enemyScript.AttackAnimation());
+        StartCoroutine(_enemy.AttackAnimation());
         
         if (!playerStats)
         {
