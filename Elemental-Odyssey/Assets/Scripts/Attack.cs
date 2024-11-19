@@ -11,6 +11,7 @@ public class Attack : MonoBehaviour
     public float attackDamage = 40;
     private bool attackReady = true;
     public GameObject attackObject;
+    [SerializeField] private AudioClip[] swordSoundClips;
     
     private void Start()
     {
@@ -26,6 +27,7 @@ public class Attack : MonoBehaviour
             attackReady = false;
             playerMovement.attacking = true;
             StartCoroutine(AttackCoroutine());
+            SoundFXManager.instance.PlayRandomSoundFXClip(swordSoundClips, transform, 1f);
         }
     }
 

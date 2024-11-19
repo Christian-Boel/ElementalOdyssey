@@ -555,6 +555,7 @@ MonoBehaviour:
   detectionRange: 6.5
   stoppingDistance: 1.5
   hp: 250
+  hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
 --- !u!70 &-3317984606843891960
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

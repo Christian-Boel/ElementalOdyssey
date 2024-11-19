@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
     private bool isFlashing = false;
     private Transform player;
     private SpriterAnimationController spriter;
+    [SerializeField] private AudioClip hurtSound;
 
     void Start()
     {
@@ -66,6 +67,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
         if (!isFlashing)
         {
             StartCoroutine(FlashRed());
+            SoundFXManager.instance.PlaySoundFXClip(hurtSound, transform, 0.5f);
         }
 
         if (hp <= 0)
