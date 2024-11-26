@@ -11,12 +11,13 @@ public class GameManager : MonoBehaviour
     private GameObject _player;
     public GameObject _playerPrefab;
     
-    
     private string _currentSceneName;
     private bool _shouldSpawnPlayer = false;
     private PlayerStats _playerStats;
     private AudioManager audioManager;
     private SceneTransitionManager sceneTransitionManager;
+    private HashSet<KeyType> _collectedKeys = new HashSet<KeyType>();
+
 
     void Awake()
     {
@@ -35,17 +36,33 @@ public class GameManager : MonoBehaviour
     {
         audioManager = GetComponent<AudioManager>();
         sceneTransitionManager = GetComponent<SceneTransitionManager>();
-        
+
         _player = GameObject.FindGameObjectWithTag("Player");
         _currentSceneName = SceneManager.GetActiveScene().name;
-        
+
         if (!_player && !_currentSceneName.ToLower().Contains("menu"))
         {
+            SpawnPlayer();
+        }
+
+        _playerStats = _player.GetComponent<PlayerStats>();
+    }
+
+    private void SpawnPlayer()
+    {
+        GameObject spawnPoint = GameObject.FindWithTag("PlayerSpawnPoint");
+        
+        if (spawnPoint != null)
+        {
+            _player = Instantiate(_playerPrefab, 
+                spawnPoint.transform.position, 
+                spawnPoint.transform.rotation);
+        }
+        else
+        {
+            Debug.LogWarning("PlayerSpawnPoint not found in the scene!");
             _player = Instantiate(_playerPrefab, Vector3.zero, Quaternion.identity);
         }
-        
-        _playerStats = _player.GetComponent<PlayerStats>();
-        
     }
 
     public void HandlePickup(Item item)
@@ -74,9 +91,10 @@ public class GameManager : MonoBehaviour
     private void HandleKey(Item item)
     {
         KeyType keyType = item.keyType;
-        // playerInventory.AddKey(keyType);
+        AddKey(keyType);
         Debug.Log("Picked up a key: " + keyType);
     }
+
     
     public void SpawnEnemy()
     {
@@ -85,11 +103,24 @@ public class GameManager : MonoBehaviour
 
     public void SwitchScene(string sceneName)
     {
-        
-        //TODO: SET PLAYER UP - RENDER PLAYER IF ITS NOT ALREADY DONE!!!!!!!!!
+        SceneTransitionManager.Instance.SwitchScene(sceneName);
+    }
     
-        sceneTransitionManager.SwitchScene(sceneName);
+    public void AddKey(KeyType keyType)
+    {
+        if (_collectedKeys.Add(keyType))
+        {
+            Debug.Log("Key added to inventory: " + keyType);
+        }
+        else
+        {
+            Debug.Log("Key already in inventory: " + keyType);
+        }
     }
 
-    // Other global methods...
+    public bool HasKey(KeyType keyType)
+    {
+        return _collectedKeys.Contains(keyType);
+    }
+
 }

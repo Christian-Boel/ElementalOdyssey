@@ -14,7 +14,6 @@ public class EnemySpawner : MonoBehaviour
     public float respawnDelay = 5f;     // Delay between enemy death and respawn
 
     private List<Enemy> spawnedEnemies = new List<Enemy>(); // List to keep track of spawned enemies
-    private Transform player;
     private bool playerInRange = false;
     private Coroutine spawnCoroutine;
     private Coroutine despawnCoroutine;
@@ -23,16 +22,6 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        // Find the player by tag
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-        if (playerObject)
-        {
-            player = playerObject.transform;
-        }
-        else
-        { 
-            Debug.LogError("Player not found in the scene.");
-        }
 
         // Ensure the collider matches the spawn radius
         CircleCollider2D collider = GetComponent<CircleCollider2D>();
