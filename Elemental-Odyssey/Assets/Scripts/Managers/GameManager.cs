@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     private PlayerStats _playerStats;
     private AudioManager audioManager;
     private SceneTransitionManager sceneTransitionManager;
+    private HashSet<KeyType> _collectedKeys = new HashSet<KeyType>();
+
 
     void Awake()
     {
@@ -89,9 +91,10 @@ public class GameManager : MonoBehaviour
     private void HandleKey(Item item)
     {
         KeyType keyType = item.keyType;
-        // playerInventory.AddKey(keyType);
+        AddKey(keyType);
         Debug.Log("Picked up a key: " + keyType);
     }
+
     
     public void SpawnEnemy()
     {
@@ -106,4 +109,21 @@ public class GameManager : MonoBehaviour
         sceneTransitionManager.SwitchScene(sceneName);
     }
     
+    public void AddKey(KeyType keyType)
+    {
+        if (_collectedKeys.Add(keyType))
+        {
+            Debug.Log("Key added to inventory: " + keyType);
+        }
+        else
+        {
+            Debug.Log("Key already in inventory: " + keyType);
+        }
+    }
+
+    public bool HasKey(KeyType keyType)
+    {
+        return _collectedKeys.Contains(keyType);
+    }
+
 }
