@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b28953aca73c459492b4e2d969a0255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
+  speed: 4
   detectionRange: 6.5
   stoppingDistance: 1.5
   hp: 140
