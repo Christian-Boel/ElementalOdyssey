@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     private GameObject _player;
     public GameObject _playerPrefab;
     
-    
     private string _currentSceneName;
     private bool _shouldSpawnPlayer = false;
     private PlayerStats _playerStats;
