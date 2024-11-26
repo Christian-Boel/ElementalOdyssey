@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour, IAttackedPossible
 {
-    public float maxHealth = 1000;
+    public float maxHealth = 400;
     public float currentHealth;
     public HealthBar healthBar;
 
