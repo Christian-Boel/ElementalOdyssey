@@ -14,13 +14,13 @@ public class GameManager : MonoBehaviour
     private string _currentSceneName;
     private bool _shouldSpawnPlayer = false;
     private PlayerStats _playerStats;
-    private AudioManager audioManager;
     private SceneTransitionManager sceneTransitionManager;
     private HashSet<KeyType> _collectedKeys = new HashSet<KeyType>();
 
 
     void Awake()
     {
+        Debug.Log("Awake");
         if (Instance == null)
         {
             Instance = this;
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        audioManager = GetComponent<AudioManager>();
+        Debug.Log("Start");
         sceneTransitionManager = GetComponent<SceneTransitionManager>();
 
         _player = GameObject.FindGameObjectWithTag("Player");
@@ -93,17 +93,6 @@ public class GameManager : MonoBehaviour
         KeyType keyType = item.keyType;
         AddKey(keyType);
         Debug.Log("Picked up a key: " + keyType);
-    }
-
-    
-    public void SpawnEnemy()
-    {
-       // enemyManager.SpawnEnemies();
-    }
-
-    public void SwitchScene(string sceneName)
-    {
-        SceneTransitionManager.Instance.SwitchScene(sceneName);
     }
     
     public void AddKey(KeyType keyType)

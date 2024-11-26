@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GrassWorld.unity
+    guid: 930303000e70a41a7ae18d234de1d558
+  - enabled: 1
+    path: Assets/Scenes/Snow World.unity
+    guid: 603d3c0f1ab696d499e7b664ded056a9
   m_configObjects: {}
