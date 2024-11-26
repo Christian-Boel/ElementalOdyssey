@@ -34,16 +34,33 @@ public class GameManager : MonoBehaviour
     {
         audioManager = GetComponent<AudioManager>();
         sceneTransitionManager = GetComponent<SceneTransitionManager>();
-        
+
         _player = GameObject.FindGameObjectWithTag("Player");
         _currentSceneName = SceneManager.GetActiveScene().name;
-        
+
         if (!_player && !_currentSceneName.ToLower().Contains("menu"))
         {
-            _player = Instantiate(_playerPrefab, Vector3.zero, Quaternion.identity);
+            SpawnPlayer();
         }
 
         _playerStats = _player.GetComponent<PlayerStats>();
+    }
+
+    private void SpawnPlayer()
+    {
+        GameObject spawnPoint = GameObject.FindWithTag("PlayerSpawnPoint");
+        
+        if (spawnPoint != null)
+        {
+            _player = Instantiate(_playerPrefab, 
+                spawnPoint.transform.position, 
+                spawnPoint.transform.rotation);
+        }
+        else
+        {
+            Debug.LogWarning("PlayerSpawnPoint not found in the scene!");
+            _player = Instantiate(_playerPrefab, Vector3.zero, Quaternion.identity);
+        }
     }
 
     public void HandlePickup(Item item)
