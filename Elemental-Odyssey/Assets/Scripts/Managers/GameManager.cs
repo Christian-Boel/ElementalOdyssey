@@ -100,10 +100,7 @@ public class GameManager : MonoBehaviour
 
     public void SwitchScene(string sceneName)
     {
-        
-        //TODO: SET PLAYER UP - RENDER PLAYER IF ITS NOT ALREADY DONE!!!!!!!!!
-    
-        sceneTransitionManager.SwitchScene(sceneName);
+        SceneTransitionManager.Instance.SwitchScene(sceneName);
     }
     
 }
