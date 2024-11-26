@@ -42,9 +42,8 @@ public class GameManager : MonoBehaviour
         {
             _player = Instantiate(_playerPrefab, Vector3.zero, Quaternion.identity);
         }
-        
+
         _playerStats = _player.GetComponent<PlayerStats>();
-        
     }
 
     public void HandlePickup(Item item)
@@ -89,6 +88,5 @@ public class GameManager : MonoBehaviour
     
         sceneTransitionManager.SwitchScene(sceneName);
     }
-
-    // Other global methods...
+    
 }
