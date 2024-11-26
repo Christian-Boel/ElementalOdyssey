@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b617a75f9270c5448895f933fefd8629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SortingLayer: Default
+  SortingLayer: Entities
   SortingOrder: 0
   ChildData:
     SpritePivots:
@@ -123,6 +123,7 @@ MonoBehaviour:
   detectionRange: 6.5
   stoppingDistance: 1.5
   hp: 100
+  spawner: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
 --- !u!70 &6535882826262419742
 CapsuleCollider2D:
