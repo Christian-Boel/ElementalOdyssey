@@ -12,16 +12,14 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     {
         currentHealth = maxHealth;
         healthBar = GameObject.FindGameObjectWithTag("Healthbar").GetComponent<HealthBar>();
-        if (healthBar != null)
-        {
-            healthBar.SetHealth(currentHealth, maxHealth);
-        }
+        UpdateHealthBar();
     }
-
+    
     public void Heal(float healAmount)
     {
         float newHealth = currentHealth + healAmount;
         currentHealth = newHealth > maxHealth ? maxHealth : newHealth;
+        UpdateHealthBar();
     }
     
     public void TakeDmg(float dmg)
@@ -44,5 +42,13 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     public void Die()
     {
         Debug.Log("Player has died!");
+    }
+
+    private void UpdateHealthBar()
+    {
+        if (healthBar != null)
+        {
+            healthBar.SetHealth(currentHealth, maxHealth);
+        }
     }
 }
