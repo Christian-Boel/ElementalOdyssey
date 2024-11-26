@@ -10,15 +10,16 @@ public class GameManager : MonoBehaviour
     
     private GameObject _player;
     public GameObject _playerPrefab;
-    
+
+    [SerializeField] private AudioClip healthPotionSoundClip;
+    [SerializeField] private AudioClip keySoundClip;
     private string _currentSceneName;
     private bool _shouldSpawnPlayer = false;
     private PlayerStats _playerStats;
     private AudioManager audioManager;
     private SceneTransitionManager sceneTransitionManager;
     private HashSet<KeyType> _collectedKeys = new HashSet<KeyType>();
-
-
+    
     void Awake()
     {
         if (Instance == null)
@@ -85,12 +86,14 @@ public class GameManager : MonoBehaviour
     {
         int healAmount = item.healAmount;
         _playerStats.Heal(healAmount);
+        SoundFXManager.instance.PlaySoundFXClip(healthPotionSoundClip,transform, 1f);
         Debug.Log("Picked up a health potion. Healed for " + healAmount);
     }
 
     private void HandleKey(Item item)
     {
         KeyType keyType = item.keyType;
+        SoundFXManager.instance.PlaySoundFXClip(keySoundClip,transform, 1f);
         AddKey(keyType);
         Debug.Log("Picked up a key: " + keyType);
     }
