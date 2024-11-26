@@ -3,11 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\fadeoutcutscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\fadeoutcutscene.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\typewritereffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\typewritereffect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\scripts\\playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\animationskipper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\animationskipper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\scripts\\managers\\soundfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\assets\\scripts\\managers\\soundfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\soundfxmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,11 +27,11 @@
       "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\spriteranimationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\unityeditor\\spritekeyframeextractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\assets\\unityeditor\\spritekeyframeextractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\unityeditor\\spritekeyframeextractor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|c:\\users\\mutiv\\desktop\\skole\\7. semester\\games\\elementalodyssey\\elemental-odyssey\\assets\\unityeditor\\spriteframedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\assets\\unityeditor\\spriteframedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{69907B05-C3ED-195B-7829-A1C9020E4FD2}|Assembly-CSharp.csproj|solutionrelative:assets\\unityeditor\\spriteframedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +54,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FadeOutCutscene.cs",
+              "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\FadeOutCutscene.cs",
+              "RelativeDocumentMoniker": "Assets\\FadeOutCutscene.cs",
+              "ToolTip": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\FadeOutCutscene.cs",
+              "RelativeToolTip": "Assets\\FadeOutCutscene.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:31:45.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerStats.cs",
+              "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\Scripts\\PlayerStats.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerStats.cs",
+              "ToolTip": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\Scripts\\PlayerStats.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerStats.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:11:36.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "TypewriterEffect.cs",
+              "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\TypewriterEffect.cs",
+              "RelativeDocumentMoniker": "Assets\\TypewriterEffect.cs",
+              "ToolTip": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\TypewriterEffect.cs",
+              "RelativeToolTip": "Assets\\TypewriterEffect.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:09:00.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "SoundFXManager.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\Scripts\\Managers\\SoundFXManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\SoundFXManager.cs",
@@ -50,12 +101,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Managers\\SoundFXManager.cs",
               "ViewState": "AQIAABsAAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T12:12:16.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T12:12:16.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "SpriteKeyframeExtractor.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\UnityEditor\\SpriteKeyframeExtractor.cs",
               "RelativeDocumentMoniker": "Assets\\UnityEditor\\SpriteKeyframeExtractor.cs",
@@ -63,12 +113,11 @@
               "RelativeToolTip": "Assets\\UnityEditor\\SpriteKeyframeExtractor.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T11:40:28.661Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T11:40:28.661Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "SpriteFrameData.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\UnityEditor\\SpriteFrameData.cs",
               "RelativeDocumentMoniker": "Assets\\UnityEditor\\SpriteFrameData.cs",
@@ -76,12 +125,11 @@
               "RelativeToolTip": "Assets\\UnityEditor\\SpriteFrameData.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T10:57:10.23Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-26T10:57:10.23Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AnimationSkipper.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\AnimationSkipper.cs",
               "RelativeDocumentMoniker": "Assets\\AnimationSkipper.cs",
@@ -94,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SpriterAnimationController.cs",
               "DocumentMoniker": "C:\\Users\\mutiv\\Desktop\\Skole\\7. Semester\\Games\\ElementalOdyssey\\Elemental-Odyssey\\Assets\\SpriterAnimationController.cs",
               "RelativeDocumentMoniker": "Assets\\SpriterAnimationController.cs",
@@ -102,8 +150,7 @@
               "RelativeToolTip": "Assets\\SpriterAnimationController.cs",
               "ViewState": "AQIAABkAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-05T09:06:18.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-05T09:06:18.042Z"
             }
           ]
         },
