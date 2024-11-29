@@ -15,17 +15,17 @@ MonoBehaviour:
   keyframes:
   - time: 0
     frame: 0
-  - time: 11.5
-    frame: 690
-  - time: 21.45
-    frame: 1287
-  - time: 31.9
-    frame: 1914
-  - time: 42
-    frame: 2520
-  - time: 51.733334
-    frame: 3104
-  - time: 62
-    frame: 3720
-  - time: 72
-    frame: 4320
+  - time: 9.116667
+    frame: 547
+  - time: 18.1
+    frame: 1086
+  - time: 27.116667
+    frame: 1627
+  - time: 35.1
+    frame: 2106
+  - time: 44.583332
+    frame: 2675
+  - time: 50.483334
+    frame: 3029
+  - time: 54.783333
+    frame: 3287
