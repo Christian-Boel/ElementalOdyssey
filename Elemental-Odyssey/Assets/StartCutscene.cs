@@ -5,10 +5,14 @@ using UnityEngine;
 public class StartCutscene : MonoBehaviour
 {
     public GameObject endingCutscene;
+    public GameObject musicManager;
+    public GameObject FXManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("player")){
+        if (collision.CompareTag("Player")){
+            musicManager.SetActive(false);
+            FXManager.SetActive(false);
             endingCutscene.SetActive(true);
         }
 
