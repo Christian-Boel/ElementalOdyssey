@@ -5,7 +5,11 @@ using UnityEngine;
 public class SoundFXManager : MonoBehaviour
 {
     public static SoundFXManager instance; //singleton 
-    [SerializeField] private AudioSource soundFXObject;
+    [Header("Audio Source Prefab for Sound Effects")]
+    [SerializeField] private AudioSource soundFXObject; // Prefab for sound effects
+
+    [Header("Audio Source for Background Music")]
+    [SerializeField] private AudioSource musicAudioSource; // Add this line
 
     private void Awake()
     {
@@ -74,5 +78,40 @@ public class SoundFXManager : MonoBehaviour
 
         // Destroy the audio source after the clip has finished playing
         Destroy(audioSource.gameObject, clipLength);
+    }
+    
+    public void PlayBackgroundMusic(AudioClip musicClip, float volume = 1f, bool loop = true)
+    {
+        if (musicClip == null)
+        {
+            Debug.LogWarning("No audio clip provided to PlayBackgroundMusic.");
+            return;
+        }
+
+        if (musicAudioSource.clip == musicClip && musicAudioSource.isPlaying)
+        {
+            // Already playing this music
+            return;
+        }
+
+        musicAudioSource.clip = musicClip;
+        musicAudioSource.volume = volume;
+        musicAudioSource.loop = loop;
+        musicAudioSource.Play();
+    }
+
+    public void StopBackgroundMusic()
+    {
+        musicAudioSource.Stop();
+    }
+
+    public void PauseBackgroundMusic()
+    {
+        musicAudioSource.Pause();
+    }
+
+    public void ResumeBackgroundMusic()
+    {
+        musicAudioSource.UnPause();
     }
 }

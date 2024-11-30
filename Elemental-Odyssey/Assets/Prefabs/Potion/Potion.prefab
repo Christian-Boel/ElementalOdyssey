@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f521b87ff54d7d9f81c20ed5ffb177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ItemSoundClip: {fileID: 8300000, guid: 28b97b8779bd5594ab8a60881f171805, type: 3}
   itemType: 0
   healAmount: 200
   keyType: 0
