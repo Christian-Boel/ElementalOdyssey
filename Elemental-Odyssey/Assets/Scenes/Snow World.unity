@@ -6128,6 +6128,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2046814471054450522, guid: 977134ef02d3a45e09e0b0c2ddae7a75, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3126829195410182347, guid: 977134ef02d3a45e09e0b0c2ddae7a75, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3126829195410182347, guid: 977134ef02d3a45e09e0b0c2ddae7a75, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3126829195410182347, guid: 977134ef02d3a45e09e0b0c2ddae7a75, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3126829195410182347, guid: 977134ef02d3a45e09e0b0c2ddae7a75, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -6195,6 +6211,10 @@ PrefabInstance:
     - target: {fileID: 5108113637625971349, guid: 977134ef02d3a45e09e0b0c2ddae7a75, type: 3}
       propertyPath: m_Offset.y
       value: 0.00043309337
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108113637625971349, guid: 977134ef02d3a45e09e0b0c2ddae7a75, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7227212998252087238, guid: 977134ef02d3a45e09e0b0c2ddae7a75, type: 3}
       propertyPath: m_Name
