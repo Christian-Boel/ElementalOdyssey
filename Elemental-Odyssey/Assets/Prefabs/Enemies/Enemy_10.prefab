@@ -640,6 +640,8 @@ MonoBehaviour:
   attackDamageAmount: 50
   attackCooldown: 2.5
   attackRange: 1.5
+  player: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!1 &4868973337955729317
 GameObject:
   m_ObjectHideFlags: 0

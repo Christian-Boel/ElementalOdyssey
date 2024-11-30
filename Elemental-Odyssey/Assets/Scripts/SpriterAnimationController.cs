@@ -43,6 +43,20 @@ public class SpriterAnimationController : MonoBehaviour
             return;
         }
 
-        animator.Play(animName);
+        try
+        {
+            try
+            {
+                animator.Play(animName);
+            }
+            catch
+            {
+                animator.Play(animName.ToLower());
+            }
+        }
+        catch
+        {
+            Debug.LogError("No animation found for" + animName);
+        }
     }
 }

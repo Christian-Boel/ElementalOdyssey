@@ -8,7 +8,7 @@ public class EnemyAttack : MonoBehaviour
     public bool useAoEDamage = true;    
     public bool useDirectAttack = true;
 
-    // AoE damage settings
+    // AoE damage settingss
     public int aoeDamageAmount = 2;
     public float aoeDamageInterval = 0.5f;
     public float aoeRange = 2f;       
@@ -20,8 +20,8 @@ public class EnemyAttack : MonoBehaviour
     public float attackRange = 1.5f;       
     private float attackTimer = 0f;        
     
-    private Transform player;              
-    private PlayerStats playerStats;      
+    public Transform player;              
+    public PlayerStats playerStats;      
     private Enemy _enemy;
     
     void Start()
@@ -38,7 +38,7 @@ public class EnemyAttack : MonoBehaviour
             Debug.LogError("Player not found");
             return;
         }
-
+        Debug.Log("Player found");
         player = playerObject.transform;
         playerStats = playerObject.GetComponentInParent<PlayerStats>();
         if (!player)
@@ -54,15 +54,8 @@ public class EnemyAttack : MonoBehaviour
     void Update()
     {
         if (!player)
-        {
-            try
-            {
-                findPlayer();
-            }
-            catch
-            {
-                return;
-            }
+        {   
+            findPlayer();
         }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);

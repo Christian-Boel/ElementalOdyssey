@@ -148,6 +148,8 @@ MonoBehaviour:
   attackDamageAmount: 10
   attackCooldown: 1
   attackRange: 2
+  player: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!70 &2546791462343028555
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

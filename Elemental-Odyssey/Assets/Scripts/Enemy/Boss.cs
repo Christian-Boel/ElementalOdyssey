@@ -9,31 +9,26 @@ public class Boss : Enemy, IAttackedPossible
     public bool isInvulnerable = false;
     public bool isPhaseTransitioning = false;
     public BossPhaseData[] phaseData; // Array to hold data for each phase
-
+    public float hpPercentage = 100;
     [Header("Minion Spawner")]
     public EnemySpawner minionSpawner; // Reference to the minion spawner
+    public int currentPhaseIndex = 0; // Index to track current phase
 
 
     protected override void Start()
     {
         base.Start();
-        // Initialize boss-specific setup
-        // Ensure phaseData is correctly set up
+
         if (phaseData.Length == 0)
         {
             Debug.LogError("Boss - Phase data is not set!");
             return;
         }
-        ApplyPhaseSettings(currentPhase);
-    }
 
-    protected override void Update()
-    {
-        // Boss doesn't move when invulnerable
-        if (isInvulnerable)
-            return;
+        // Sort phaseData by phaseThreshold in descending order
+        System.Array.Sort(phaseData, (a, b) => b.phaseThreshold.CompareTo(a.phaseThreshold));
 
-        base.Update();
+        ApplyPhaseSettings(currentPhaseIndex);
     }
 
     public override void TakeDmg(float dmg)
@@ -48,77 +43,71 @@ public class Boss : Enemy, IAttackedPossible
 
     private void CheckPhaseTransition()
     {
-        // Don't transition if already transitioning
         if (isPhaseTransitioning)
             return;
 
-        float hpPercentage = hp / maxHp;
-
-        // Determine the next phase based on HP percentage
-        foreach (var data in phaseData)
+        hpPercentage = hp / maxHp;
+        
+        // Check if we can transition to the next phase
+        if (currentPhaseIndex + 1 < phaseData.Length)
         {
-            if (hpPercentage <= data.phaseThreshold && currentPhase != data.phase)
+            var nextPhaseData = phaseData[currentPhaseIndex + 1];
+            if (hpPercentage <= nextPhaseData.phaseThreshold)
             {
-                StartCoroutine(TransitionToPhase(data.phase));
-                break;
+                StartCoroutine(TransitionToPhase(currentPhaseIndex + 1));
             }
         }
     }
 
-    private IEnumerator TransitionToPhase(BossPhase newPhase)
+    private IEnumerator TransitionToPhase(int newPhaseIndex)
     {
         isPhaseTransitioning = true;
 
-        // Optional: Play transition animation or effect
-        // e.g., spriter.PlayAnimation("PHASE_TRANSITION");
-
+        Debug.Log("transitioning to "+ newPhaseIndex.ToString());
         // Become invulnerable
         isInvulnerable = true;
 
-        // Activate minion spawner if specified
-        BossPhaseData data = GetPhaseData(newPhase);
-        if (data.spawnMinions && minionSpawner)
-        {
-            minionSpawner.ActivateSpawner();
-        }
-
-        // Wait for invulnerability duration
-        yield return new WaitForSeconds(data.invulnerableDuration);
+        var data = phaseData[newPhaseIndex];
 
         // Update to the new phase
-        currentPhase = newPhase;
-        ApplyPhaseSettings(currentPhase);
+        currentPhaseIndex = newPhaseIndex;
+        ApplyPhaseSettings(currentPhaseIndex);
+        
+        yield return new WaitForSeconds(data.invulnerableDuration);
 
         // End invulnerability
         isInvulnerable = false;
         isPhaseTransitioning = false;
     }
 
-    private void ApplyPhaseSettings(BossPhase phase)
+    private void ApplyPhaseSettings(int phaseIndex)
     {
-        BossPhaseData data = GetPhaseData(phase);
+        var data = phaseData[phaseIndex];
+        var colour = data.phaseColor;
+        currentPhase = data.phase;
+    
+        foreach (var sr in spriteRenderers)
+        {
+            sr.color = colour;
+        }
 
-        // Update stats
+        // Update originalColors to the new phase colors
+        originalColors.Clear();
+        foreach (var sr in spriteRenderers)
+        {
+            originalColors.Add(sr.color);
+        }
+
         speed = data.speed;
         detectionRange = data.detectionRange;
 
-        // Change sprite or animation
-        // if (data.phaseSprite)
-        // {
-        //     // Assuming you have a SpriteRenderer component
-        //     spriteRenderer.sprite = data.phaseSprite;
-        // }
-        
-    }
-
-    private BossPhaseData GetPhaseData(BossPhase phase)
-    {
-        foreach (var data in phaseData)
+        if (data.spawnMinions && minionSpawner)
         {
-            if (data.phase == phase)
-                return data;
+            minionSpawner.ActivateSpawner();
         }
-        Debug.LogError($"Boss - Phase data for {phase} not found!");
-        return null;
+        else
+        {
+            minionSpawner.DeactivateSpawner();
+        }
     }
 }

@@ -10,8 +10,8 @@ public class Enemy : MonoBehaviour, IAttackedPossible
     public float maxHp = 30;
     public float hp = 30;
     public EnemySpawner spawner;
-    private List<SpriteRenderer> spriteRenderers = new List<SpriteRenderer>();
-    private List<Color> originalColors = new List<Color>();
+    protected List<SpriteRenderer> spriteRenderers = new List<SpriteRenderer>();
+    protected List<Color> originalColors = new List<Color>();
     private bool isFlashing = false;
     private Transform player;
     private SpriterAnimationController spriter;
@@ -28,16 +28,26 @@ public class Enemy : MonoBehaviour, IAttackedPossible
         {
             originalColors.Add(sr.color);
         }
-        
+
+        FindPLayer();
+    }
+
+    public void FindPLayer()
+    {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
+        {
             player = playerObject.transform;
+        }
     }
 
     protected virtual void Update()
     {
         if (!player)
-            return;
+        {
+            FindPLayer();
+            if (!player) return;
+        }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
         
@@ -86,7 +96,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
     {
         spriter.PlayAnimation("HURT");
         yield return new WaitForSeconds(0.75f);
-        ReturnToDefaultAnimation();
+        ReturnToDefaultAnimation(); 
     }
 
     IEnumerator FlashRed()

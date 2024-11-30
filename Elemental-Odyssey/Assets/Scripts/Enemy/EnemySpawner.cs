@@ -116,7 +116,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnEnemies()
     {
-        while (playerInRange || isActive )
+        while (playerInRange && isActive )
         {
             // Clean up any null references (enemies that have been destroyed)
             spawnedEnemies.RemoveAll(item => item == null);

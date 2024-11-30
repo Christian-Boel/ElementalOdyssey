@@ -798,6 +798,7 @@ MonoBehaviour:
   speed: 1
   detectionRange: 6.5
   stoppingDistance: 1.5
+  maxHp: 30
   hp: 300
   spawner: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
@@ -883,6 +884,8 @@ MonoBehaviour:
   attackDamageAmount: 100
   attackCooldown: 2
   attackRange: 2.5
+  player: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!1 &8087365677441809495
 GameObject:
   m_ObjectHideFlags: 0

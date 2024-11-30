@@ -1293,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5346655476917185084
 Transform:
   m_ObjectHideFlags: 0
@@ -1487,6 +1487,7 @@ GameObject:
   - component: {fileID: 1933879205387419746}
   - component: {fileID: 3262070194688106378}
   - component: {fileID: 6867689183835329905}
+  - component: {fileID: 8312802569681436520}
   m_Layer: 0
   m_Name: boss
   m_TagString: Enemy
@@ -1685,41 +1686,45 @@ MonoBehaviour:
   speed: 3
   detectionRange: 6.5
   stoppingDistance: 1.5
-  maxHp: 100
-  hp: 100
+  maxHp: 200
+  hp: 200
   spawner: {fileID: 0}
   hurtSound: {fileID: 0}
   currentPhase: 0
+  isInvulnerable: 0
+  isPhaseTransitioning: 0
   phaseData:
   - phase: 0
-    phaseThreshold: 100
+    phaseThreshold: 1
     speed: 3
     detectionRange: 15
     phaseColor: {r: 1, g: 1, b: 1, a: 0}
     spawnMinions: 0
     invulnerableDuration: 0
   - phase: 1
-    phaseThreshold: 75
+    phaseThreshold: 0.75
     speed: 4
     detectionRange: 15
     phaseColor: {r: 0.9433962, g: 0.6986472, b: 0.6986472, a: 0}
     spawnMinions: 0
     invulnerableDuration: 0
   - phase: 2
-    phaseThreshold: 50
+    phaseThreshold: 0.5
     speed: 5
     detectionRange: 15
     phaseColor: {r: 0.9056604, g: 0.48273405, b: 0.48273405, a: 0}
     spawnMinions: 1
     invulnerableDuration: 5
   - phase: 3
-    phaseThreshold: 20
+    phaseThreshold: 0.2
     speed: 6
     detectionRange: 15
     phaseColor: {r: 0.9150943, g: 0.30647027, b: 0.30647027, a: 0}
     spawnMinions: 0
     invulnerableDuration: 5
+  hpPercentage: 100
   minionSpawner: {fileID: 0}
+  currentPhaseIndex: 0
 --- !u!114 &6867689183835329905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1732,6 +1737,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc24e079746d96a41934c928e9cfaecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8312802569681436520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5536538569382798641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f1f1a82e2f34c9195525800f12c4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useAoEDamage: 1
+  useDirectAttack: 1
+  aoeDamageAmount: 2
+  aoeDamageInterval: 0.5
+  aoeRange: 2
+  attackDamageAmount: 20
+  attackCooldown: 2.5
+  attackRange: 1.5
+  player: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!1 &5933460090034568121
 GameObject:
   m_ObjectHideFlags: 0
