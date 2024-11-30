@@ -20,7 +20,8 @@ public class HitDetection : MonoBehaviour
 
     public void Hit(float dmg)
     {
+        Debug.Log(hpScript);
         hpScript.TakeDmg(dmg);
-        SoundFXManager.instance.PlaySoundFXClip(damageSoundClip, transform, 1f);
+        SoundFXManager.instance.PlaySoundFXClip(damageSoundClip, transform, .1f);
     }
 }
