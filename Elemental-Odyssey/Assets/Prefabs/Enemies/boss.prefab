@@ -1293,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5346655476917185084
 Transform:
   m_ObjectHideFlags: 0
@@ -1303,7 +1303,7 @@ Transform:
   m_GameObject: {fileID: 4984408212110638482}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.662, y: 2.738, z: 0}
+  m_LocalPosition: {x: -0.55, y: 2.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1490,7 +1490,7 @@ GameObject:
   - component: {fileID: 8312802569681436520}
   m_Layer: 0
   m_Name: boss
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1504,8 +1504,8 @@ Transform:
   m_GameObject: {fileID: 5536538569382798641}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.081138, y: -4.3589, z: 0}
-  m_LocalScale: {x: 2.557853, y: 2.557853, z: 2.557853}
+  m_LocalPosition: {x: 0.04, y: -4.3589, z: 0}
+  m_LocalScale: {x: 1.2239583, y: 1.2239583, z: 1.2239583}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 607721053516352880}
@@ -1641,8 +1641,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.28105125, y: 0.9}
-  m_Size: {x: 1.91, y: 1.81}
+  m_Offset: {x: -0.20224606, y: 0.6314971}
+  m_Size: {x: 1.6864139, y: 1.6864139}
   m_Direction: 0
 --- !u!50 &1933879205387419746
 Rigidbody2D:
@@ -1683,41 +1683,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 919c2d6a45015b4488e09cb8cbf6b029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1.5
   detectionRange: 6.5
   stoppingDistance: 1.5
-  maxHp: 200
-  hp: 200
+  maxHp: 1000
+  hp: 1000
   spawner: {fileID: 0}
   hurtSound: {fileID: 0}
+  battleMusicClip: {fileID: 0}
   currentPhase: 0
   isInvulnerable: 0
   isPhaseTransitioning: 0
   phaseData:
   - phase: 0
     phaseThreshold: 1
-    speed: 3
+    speed: 1.5
     detectionRange: 15
     phaseColor: {r: 1, g: 1, b: 1, a: 0}
     spawnMinions: 0
     invulnerableDuration: 0
   - phase: 1
     phaseThreshold: 0.75
-    speed: 4
+    speed: 2
     detectionRange: 15
     phaseColor: {r: 0.9433962, g: 0.6986472, b: 0.6986472, a: 0}
     spawnMinions: 0
     invulnerableDuration: 0
   - phase: 2
     phaseThreshold: 0.5
-    speed: 5
+    speed: 2.5
     detectionRange: 15
     phaseColor: {r: 0.9056604, g: 0.48273405, b: 0.48273405, a: 0}
     spawnMinions: 1
     invulnerableDuration: 5
   - phase: 3
     phaseThreshold: 0.2
-    speed: 6
+    speed: 3.5
     detectionRange: 15
     phaseColor: {r: 0.9150943, g: 0.30647027, b: 0.30647027, a: 0}
     spawnMinions: 0
@@ -1754,7 +1755,7 @@ MonoBehaviour:
   aoeDamageAmount: 2
   aoeDamageInterval: 0.5
   aoeRange: 2
-  attackDamageAmount: 20
+  attackDamageAmount: 200
   attackCooldown: 2.5
   attackRange: 1.5
   player: {fileID: 0}

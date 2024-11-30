@@ -417,7 +417,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2299742022132445576
 Transform:
   m_ObjectHideFlags: 0
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: -8925597084182639076}
   m_Layer: 0
   m_Name: Enemy_2
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1019,6 +1019,7 @@ MonoBehaviour:
   hp: 140
   spawner: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
+  battleMusicClip: {fileID: 0}
 --- !u!114 &3854867375773415565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,6 +1040,8 @@ MonoBehaviour:
   attackDamageAmount: 50
   attackCooldown: 2
   attackRange: 1.5
+  player: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!70 &2984525744342046612
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
