@@ -15,7 +15,7 @@ public class Boss : Enemy, IAttackedPossible
     public EnemySpawner minionSpawner; // Reference to the minion spawner
     public int currentPhaseIndex = 0; // Index to track current phase
     [SerializeField] private AudioClip evilLaughSoundClip;
-    [SerializeField] private AudioClip bossDeathSoundClip; // ikke brugt endnu!
+    [SerializeField] private AudioClip bossDeathSoundClip; 
 
     public List<SpikeController> controllerList; // Spike Controllers
 
@@ -50,6 +50,7 @@ public class Boss : Enemy, IAttackedPossible
     public override void Die()
     {
         base.Die();
+        SoundFXManager.instance.PlaySoundFXClip(bossDeathSoundClip, transform, 0.8f);
         controllerList.ForEach(controller => { controller.active = false; });
     }
 

@@ -211,6 +211,7 @@ MonoBehaviour:
   maxHealth: 1000
   currentHealth: 0
   healthBar: {fileID: 0}
+  playerDeathSoundClip: {fileID: 8300000, guid: 699f2f2f8b9d8db46ab97f946940a7aa, type: 3}
 --- !u!50 &5876024747918104709
 Rigidbody2D:
   serializedVersion: 4

@@ -7,6 +7,7 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     public float maxHealth = 400;
     public float currentHealth;
     public HealthBar healthBar;
+    [SerializeField] private AudioClip playerDeathSoundClip;
 
     void Start()
     {
@@ -36,6 +37,7 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
         }
         if (currentHealth <= 0)
         {
+            SoundFXManager.instance.PlaySoundFXClip(playerDeathSoundClip, transform, 1f);
             Die();
         }
     }
