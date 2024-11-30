@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     public float despawnDelay = 5f;     // Delay before despawning enemies after player exits radius
     public bool shouldRespawn = true;   // Whether the spawner should respawn enemies
     public float respawnDelay = 5f;     // Delay between enemy death and respawn
-    private bool isActive = false;
+    public bool isActive = true;
     
     private List<Enemy> spawnedEnemies = new List<Enemy>(); // List to keep track of spawned enemies
     private bool playerInRange = false;

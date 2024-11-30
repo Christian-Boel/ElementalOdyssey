@@ -68,8 +68,8 @@ public class Enemy : MonoBehaviour, IAttackedPossible
         
         if (!isFlashing)
         {
-            StartCoroutine(FlashRed());
             SoundFXManager.instance.PlaySoundFXClip(hurtSound, transform, 0.5f);
+            StartCoroutine(FlashRed());
         }
 
         if (hp <= 0)

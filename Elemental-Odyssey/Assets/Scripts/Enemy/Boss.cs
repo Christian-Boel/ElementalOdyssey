@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Boss : Enemy
+public class Boss : Enemy, IAttackedPossible
 {
     // Boss-specific properties
     [Header("Boss Phases")]
