@@ -6,13 +6,13 @@ public class Boss : Enemy, IAttackedPossible
     // Boss-specific properties
     [Header("Boss Phases")]
     public BossPhase currentPhase = BossPhase.PhaseOne;
+    public bool isInvulnerable = false;
+    public bool isPhaseTransitioning = false;
     public BossPhaseData[] phaseData; // Array to hold data for each phase
 
     [Header("Minion Spawner")]
     public EnemySpawner minionSpawner; // Reference to the minion spawner
 
-    private bool isInvulnerable = false;
-    private bool isPhaseTransitioning = false;
 
     protected override void Start()
     {
