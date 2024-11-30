@@ -129,7 +129,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
         spriter.PlayAnimation("WALK");
     }
     
-    protected void Die()
+    public virtual void Die()
     {
         Debug.Log("Enemy died");
         spriter.PlayAnimation("DIE");

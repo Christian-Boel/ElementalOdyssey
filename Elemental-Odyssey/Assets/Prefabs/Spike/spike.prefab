@@ -100,12 +100,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  minTime: 1
-  maxTime: 5
+  minTime: 0.5
+  maxTime: 2
   reactionTime: 1
   spikeTime: 0.5
-  spikeUpTime: 0.1
-  dmg: 10
+  spikeUpTime: 1
+  dmg: 50
 --- !u!95 &5779856085571689797
 Animator:
   serializedVersion: 5

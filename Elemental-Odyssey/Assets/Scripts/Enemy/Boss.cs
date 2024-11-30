@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Boss : Enemy, IAttackedPossible
@@ -13,6 +14,8 @@ public class Boss : Enemy, IAttackedPossible
     [Header("Minion Spawner")]
     public EnemySpawner minionSpawner; // Reference to the minion spawner
     public int currentPhaseIndex = 0; // Index to track current phase
+
+    public List<SpikeController> controllerList; // Spike Controllers
 
 
     protected override void Start()
@@ -39,6 +42,12 @@ public class Boss : Enemy, IAttackedPossible
         base.TakeDmg(dmg);
 
         CheckPhaseTransition();
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        controllerList.ForEach(controller => { controller.active = false; });
     }
 
     private void CheckPhaseTransition()
@@ -108,6 +117,11 @@ public class Boss : Enemy, IAttackedPossible
         else
         {
             minionSpawner.DeactivateSpawner();
+        }
+
+        if (data.spikeController)
+        {
+            data.spikeController.active = true;
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -10,4 +11,5 @@ public class BossPhaseData
     public Color phaseColor;          // Sprite to display during this phase
     public bool spawnMinions;           // Whether to spawn minions during this phase
     public float invulnerableDuration;  // Duration of invulnerability during phase transition
+    public SpikeController spikeController; // Spike Controllers
 }
