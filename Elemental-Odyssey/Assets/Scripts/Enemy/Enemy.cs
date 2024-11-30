@@ -16,6 +16,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
     private Transform player;
     private SpriterAnimationController spriter;
     [SerializeField] private AudioClip hurtSound;
+    [SerializeField] private AudioClip battleMusicClip;
 
     protected virtual void Start()
     {
