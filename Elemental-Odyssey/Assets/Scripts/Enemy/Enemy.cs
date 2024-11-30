@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
     public float speed = 2.5f;
     public float detectionRange = 6.5f;
     public float stoppingDistance = 1.5f; // Should match attackRange in EnemyAttack
+    public float maxHp = 30;
     public float hp = 30;
     public EnemySpawner spawner;
     private List<SpriteRenderer> spriteRenderers = new List<SpriteRenderer>();
@@ -16,8 +17,9 @@ public class Enemy : MonoBehaviour, IAttackedPossible
     private SpriterAnimationController spriter;
     [SerializeField] private AudioClip hurtSound;
 
-    void Start()
+    protected virtual void Start()
     {
+        hp = maxHp;
         spriter = GetComponent<SpriterAnimationController>();
         spriteRenderers.AddRange(GetComponentsInChildren<SpriteRenderer>());
         spriter.PlayAnimation("WALK");
@@ -31,7 +33,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
             player = playerObject.transform;
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (!player)
             return;
@@ -60,14 +62,14 @@ public class Enemy : MonoBehaviour, IAttackedPossible
         }
     }
 
-    public void TakeDmg(float dmg)
+    public virtual void TakeDmg(float dmg)
     {
         hp -= dmg;
         
         if (!isFlashing)
         {
-            StartCoroutine(FlashRed());
             SoundFXManager.instance.PlaySoundFXClip(hurtSound, transform, 0.5f);
+            StartCoroutine(FlashRed());
         }
 
         if (hp <= 0)
@@ -116,7 +118,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
         spriter.PlayAnimation("WALK");
     }
     
-    void Die()
+    protected void Die()
     {
         Debug.Log("Enemy died");
         spriter.PlayAnimation("DIE");

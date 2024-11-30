@@ -24,6 +24,7 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     
     public void TakeDmg(float dmg)
     {
+        Debug.Log("dfsdf");
         currentHealth -= dmg;
         if (healthBar)
         {

@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b78b871f8adc443858bc488ade821a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageSoundClip: {fileID: 0}
+  damageSoundClip: {fileID: 8300000, guid: f3474a30923599544a822c09140a1e53, type: 3}
 --- !u!1 &5470954820853414628
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1a518b20cdd1141a4e688b7e089c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
 --- !u!70 &3552736324907079652
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

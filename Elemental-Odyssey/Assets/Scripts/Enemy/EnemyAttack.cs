@@ -27,6 +27,11 @@ public class EnemyAttack : MonoBehaviour
     void Start()
     {
         _enemy = GetComponent<Enemy>();
+        findPlayer();
+    }
+
+    private void findPlayer()
+    {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (!playerObject)
         {
@@ -38,18 +43,27 @@ public class EnemyAttack : MonoBehaviour
         playerStats = playerObject.GetComponentInParent<PlayerStats>();
         if (!player)
         {
-                Debug.LogError("NO PLAYER FOUND");
+            Debug.LogError("NO PLAYER FOUND");
         }
         if (!playerStats)
         {
-                Debug.LogError("NO PLAYER STATS FOUND");
+            Debug.LogError("NO PLAYER STATS FOUND");
         }
     }
 
     void Update()
     {
         if (!player)
-            return;
+        {
+            try
+            {
+                findPlayer();
+            }
+            catch
+            {
+                return;
+            }
+        }
 
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
