@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Lavatile 11
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -667426111, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-  - {fileID: 1866793535, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-  - {fileID: 1886595998, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-  - {fileID: 69201557, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-  - {fileID: 983351085, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-  - {fileID: 815113873, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
   - {fileID: -1040090588, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
+  - {fileID: 815113873, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
+  - {fileID: 983351085, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
+  - {fileID: 69201557, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
+  - {fileID: 1886595998, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
+  - {fileID: 1866793535, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
+  - {fileID: -667426111, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
   m_MinSpeed: 6
   m_MaxSpeed: 6
   m_AnimationStartTime: 0

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: fdb70b1eedeb9479bb5fa07b80482470, type: 3}
-  m_Color: {r: 0.4766268, g: 0.9339623, b: 0.41852084, a: 1}
+  m_Color: {r: 0.8396226, g: 0.14653791, b: 0.14653791, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -190,7 +190,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 1379c740440634cb39ac21ca13dacc4b, type: 3}
-  m_Color: {r: 0.4766268, g: 0.9339623, b: 0.41852084, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -274,7 +274,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: cede022b05388425c9a68fb5be19afa3, type: 3}
-  m_Color: {r: 0.4766268, g: 0.9339623, b: 0.41852084, a: 1}
+  m_Color: {r: 0.8396226, g: 0.14653791, b: 0.14653791, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -390,7 +390,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 990ae5e9ead4948e29c4e960a38c6277, type: 3}
-  m_Color: {r: 0.4766268, g: 0.9339623, b: 0.41852084, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -651,7 +651,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 27cced8bd7fb4464d9afa2c8a970d4ab, type: 3}
-  m_Color: {r: 0.4766268, g: 0.9339623, b: 0.41852084, a: 1}
+  m_Color: {r: 0.8396226, g: 0.14653791, b: 0.14653791, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -735,7 +735,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b652362e08dbe437e821899bd0ad5a72, type: 3}
-  m_Color: {r: 0.4766268, g: 0.9339623, b: 0.41852084, a: 1}
+  m_Color: {r: 0.8396226, g: 0.14653791, b: 0.14653791, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -851,7 +851,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 6b543713ad2f94da7808d322921493f9, type: 3}
-  m_Color: {r: 0.4766268, g: 0.9339623, b: 0.41852084, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -908,7 +908,7 @@ GameObject:
   - component: {fileID: 2984525744342046612}
   - component: {fileID: -8925597084182639076}
   m_Layer: 0
-  m_Name: Green_Enemy_2
+  m_Name: Enemy_2 Red
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1012,11 +1012,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b28953aca73c459492b4e2d969a0255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  detectionRange: 6.5
+  speed: 1.5
+  detectionRange: 10
   stoppingDistance: 1.5
-  maxHp: 30
-  hp: 140
+  maxHp: 200
+  hp: 200
   spawner: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
 --- !u!114 &3854867375773415565
@@ -1071,9 +1071,9 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11297314, y: -2.66}
-  m_Size: {x: 2.8540547, y: 2.8540547}
-  m_Direction: 1
+  m_Offset: {x: 0.1599999, y: 0.8582577}
+  m_Size: {x: 3.8794854, y: 9.967457}
+  m_Direction: 0
 --- !u!50 &-8925597084182639076
 Rigidbody2D:
   serializedVersion: 4
