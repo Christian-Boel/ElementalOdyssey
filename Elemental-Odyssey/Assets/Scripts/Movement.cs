@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
             StartCoroutine(Dash());
-            SoundFXManager.instance.PlayRandomSoundFXClip(dashSoundClips, transform, .05f);
+            SoundFXManager.instance.PlayRandomSoundFXClip(dashSoundClips, transform, .5f);
         }
     }
 
