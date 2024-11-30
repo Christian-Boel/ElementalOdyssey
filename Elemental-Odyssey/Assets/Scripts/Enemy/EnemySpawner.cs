@@ -12,7 +12,8 @@ public class EnemySpawner : MonoBehaviour
     public float despawnDelay = 5f;     // Delay before despawning enemies after player exits radius
     public bool shouldRespawn = true;   // Whether the spawner should respawn enemies
     public float respawnDelay = 5f;     // Delay between enemy death and respawn
-
+    private bool isActive = false;
+    
     private List<Enemy> spawnedEnemies = new List<Enemy>(); // List to keep track of spawned enemies
     private bool playerInRange = false;
     private Coroutine spawnCoroutine;
@@ -33,6 +34,25 @@ public class EnemySpawner : MonoBehaviour
         else
         {
             Debug.LogError("CircleCollider2D not found on EnemySpawner.");
+        }
+    }
+    
+    public void ActivateSpawner()
+    {
+        isActive = true;
+        if (spawnCoroutine == null)
+        {
+            spawnCoroutine = StartCoroutine(SpawnEnemies());
+        }
+    }
+
+    public void DeactivateSpawner()
+    {
+        isActive = false;
+        if (spawnCoroutine != null)
+        {
+            StopCoroutine(spawnCoroutine);
+            spawnCoroutine = null;
         }
     }
 
@@ -96,7 +116,7 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator SpawnEnemies()
     {
-        while (playerInRange)
+        while (playerInRange || isActive )
         {
             // Clean up any null references (enemies that have been destroyed)
             spawnedEnemies.RemoveAll(item => item == null);
