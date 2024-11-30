@@ -13202,9 +13202,17 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3262070194688106378, guid: 18b74be038ce4c640b269002273e00c6, type: 3}
+      propertyPath: evilLaughClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 399b7be318f6f5c409c28713eff34d14, type: 3}
+    - target: {fileID: 3262070194688106378, guid: 18b74be038ce4c640b269002273e00c6, type: 3}
       propertyPath: minionSpawner
       value: 
       objectReference: {fileID: 334903062}
+    - target: {fileID: 3262070194688106378, guid: 18b74be038ce4c640b269002273e00c6, type: 3}
+      propertyPath: evilLaughSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 399b7be318f6f5c409c28713eff34d14, type: 3}
     - target: {fileID: 3262070194688106378, guid: 18b74be038ce4c640b269002273e00c6, type: 3}
       propertyPath: phaseData.Array.data[0].speed
       value: 1.5

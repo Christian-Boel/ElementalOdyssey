@@ -7,7 +7,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private float dashSpeed = 18f;         // Speed during dash
     [SerializeField] private float dashDuration = 0.1f;     // Duration of dash in seconds
     [SerializeField] private float dashCooldown = 2.5f;       // Cooldown time between dashes
-    [SerializeField] private AudioClip dashSoundClip;
+    [SerializeField] private AudioClip[] dashSoundClips;
 
     private Rigidbody2D rb;
     private bool isDashing = false;
@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
             StartCoroutine(Dash());
-            SoundFXManager.instance.PlaySoundFXClip(dashSoundClip, transform, .05f);
+            SoundFXManager.instance.PlayRandomSoundFXClip(dashSoundClips, transform, .05f);
         }
     }
 

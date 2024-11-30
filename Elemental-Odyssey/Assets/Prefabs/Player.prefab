@@ -190,7 +190,10 @@ MonoBehaviour:
   dashSpeed: 18
   dashDuration: 0.1
   dashCooldown: 2.5
-  dashSoundClip: {fileID: 8300000, guid: 5f48a76df21f1fb46ae66257be2d1297, type: 3}
+  dashSoundClips:
+  - {fileID: 8300000, guid: caff7aceee987b544b5269821cee3fb5, type: 3}
+  - {fileID: 8300000, guid: e06aca586fd70cb4a96fa346db929667, type: 3}
+  - {fileID: 8300000, guid: 325e0eb5a328d0449b33fe823c6b89d5, type: 3}
   attacking: 0
   attackPenalty: 0.3
 --- !u!114 &6915010313607650890
@@ -295,6 +298,7 @@ MonoBehaviour:
   swordSoundClips:
   - {fileID: 8300000, guid: 2e913801ecbbc7546b6fd5af44ce2211, type: 3}
   - {fileID: 8300000, guid: 8249e2272ccb6974bba8d76ed6c4c3db, type: 3}
+  - {fileID: 8300000, guid: 0087973d781c63143802009e4d36a3c0, type: 3}
 --- !u!114 &-77420379799255715
 MonoBehaviour:
   m_ObjectHideFlags: 0
