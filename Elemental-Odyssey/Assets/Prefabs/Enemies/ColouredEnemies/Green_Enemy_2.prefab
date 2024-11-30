@@ -1015,9 +1015,11 @@ MonoBehaviour:
   speed: 2.5
   detectionRange: 6.5
   stoppingDistance: 1.5
+  maxHp: 30
   hp: 140
   spawner: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
+  battleMusicClip: {fileID: 0}
 --- !u!114 &3854867375773415565
 MonoBehaviour:
   m_ObjectHideFlags: 0
