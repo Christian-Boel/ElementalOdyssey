@@ -5,22 +5,28 @@ using UnityEngine;
 public class SpikeController : MonoBehaviour
 {
     public bool active = false;
-    public bool i = false;
+    private bool isActive = false;
 
 
     private void Update()
     {
-        if (active && !i)
+        if (active && !isActive)
         {
-
-        }   
+            isActive = true;
+            ActivateSpikes(true);
+        }
+        else if(!active && isActive)
+        {
+            isActive = false;
+            ActivateSpikes(false);
+        }
     }
-    public void ActivateSpikes()
+    public void ActivateSpikes(bool activate)
     {
         Transform spikeController = transform;
         foreach (Transform spike in spikeController)
         {
-            spike.gameObject.GetComponent<Spike>().active = true;
+            spike.gameObject.GetComponent<Spike>().active = activate;
         }
     }
 }
