@@ -10,6 +10,7 @@ public class TypewriterEffect : MonoBehaviour
     private float clipLength;             // Length of the audio clip
     private float delayPerCharacter;      // Delay between each character
     private bool isTyping = false;        // Flag to indicate typing is in progress
+    public float speedUpText = 1;
 
     void OnEnable()
     {
@@ -45,7 +46,7 @@ public class TypewriterEffect : MonoBehaviour
 
         // Prevent division by zero
         int textLength = Mathf.Max(fullText.Length, 1);
-        delayPerCharacter = clipLength / textLength;
+        delayPerCharacter = clipLength / textLength / speedUpText;
 
         // Start the typing coroutine
         isTyping = true;
