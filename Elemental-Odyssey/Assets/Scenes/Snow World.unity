@@ -6599,7 +6599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5593914455722816914, guid: 3ef6c0fbc751e1d49983d4a7d2b0d122, type: 3}
       propertyPath: musicVolume
-      value: 0.03
+      value: 0.12637733
       objectReference: {fileID: 0}
     - target: {fileID: 5593914455722816914, guid: 3ef6c0fbc751e1d49983d4a7d2b0d122, type: 3}
       propertyPath: backgroundMusicClip

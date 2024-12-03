@@ -94,6 +94,10 @@ public class EnemyAttack : MonoBehaviour
 
     void AttackPlayer()
     {
+        if (_enemy.hp <= 0)
+        {
+            return;
+        }
         Debug.Log("Enemy - attack player");
         StartCoroutine(_enemy.AttackAnimation());
         
