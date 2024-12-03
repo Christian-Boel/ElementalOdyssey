@@ -63,22 +63,4 @@ public class SceneTransitionManager : MonoBehaviour
 
         _isTransitioning = false;
     }
-
-    private void UpdatePlayerPosition()
-    {
-        // Find the player object
-        GameObject player = GameManager.Instance?.GetPlayer();
-        if (player == null) return;
-
-        // Find the new spawn point in the scene
-        GameObject spawnPoint = GameObject.FindWithTag("PlayerSpawnPoint");
-        if (spawnPoint != null)
-        {
-            player.transform.position = spawnPoint.transform.position;
-        }
-        else
-        {
-            Debug.LogWarning("PlayerSpawnPoint not found in the new scene!");
-        }
-    }
 }

@@ -79,27 +79,4 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
             healthBar.SetHealth(currentHealth, maxHealth);
         }
     }
-
-    public void SaveStats()
-    {
-        // Gem stats i PlayerPrefs
-        PlayerPrefs.SetFloat("PlayerHealth", currentHealth);
-        PlayerPrefs.SetFloat("MaxHealth", maxHealth);
-        PlayerPrefs.SetFloat("AttackDamage", AD);
-        PlayerPrefs.SetFloat("MovementSpeed", MS);
-        PlayerPrefs.SetFloat("DashCooldown", dashCD);
-        PlayerPrefs.SetFloat("DashLength", dashLength);
-    }
-
-    public void RestoreStats()
-    {
-        // Gendan stats fra PlayerPrefs
-        currentHealth = PlayerPrefs.GetFloat("PlayerHealth", maxHealth);
-        maxHealth = PlayerPrefs.GetFloat("MaxHealth", maxHealth);
-        AD = PlayerPrefs.GetFloat("AttackDamage", AD);
-        MS = PlayerPrefs.GetFloat("MovementSpeed", MS);
-        dashCD = PlayerPrefs.GetFloat("DashCooldown", dashCD);
-        dashLength = PlayerPrefs.GetFloat("DashLength", dashLength);
-        UpdateHealthBar();
-    }
 }

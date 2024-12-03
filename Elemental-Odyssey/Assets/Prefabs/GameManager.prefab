@@ -60,9 +60,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 1000
   currentHealth: 1000
+  sceneStartHealth: 1000
   AD: 40
   MS: 5
   dashCD: 4
+  dashLength: 0.1
   healthBar: {fileID: 0}
-  player: {fileID: 0}
-  playerDeathSoundClip: {fileID: 0}
+  playerDeathSoundClip: {fileID: 8300000, guid: 699f2f2f8b9d8db46ab97f946940a7aa, type: 3}
