@@ -9414,7 +9414,7 @@ Tilemap:
       - {fileID: -1968067830, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: 1314620151, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: 1731560625, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 0, y: 25, z: 0}
@@ -9428,7 +9428,7 @@ Tilemap:
       - {fileID: 1886595998, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: 1866793535, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: -667426111, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 2, y: 25, z: 0}
@@ -9470,7 +9470,7 @@ Tilemap:
       - {fileID: 1886595998, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: 1866793535, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: -667426111, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -1, y: 26, z: 0}
@@ -9512,7 +9512,7 @@ Tilemap:
       - {fileID: 1886595998, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: 1866793535, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: -667426111, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -7, y: 27, z: 0}
@@ -17386,6 +17386,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3112439860108964669, guid: 1d3e9bc54618ba040bfab9f70e66d2f8, type: 3}
   m_PrefabInstance: {fileID: 978223699}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &991427350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5459229468811378599, guid: 5ae04d005a2d89040ab70700871a96a7, type: 3}
+  m_PrefabInstance: {fileID: 368792998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &994034437
 GameObject:
   m_ObjectHideFlags: 0
@@ -17987,6 +17992,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endingCutscene: {fileID: 2019430280}
+  musicManager: {fileID: 1323258327}
+  FXManager: {fileID: 991427350}
 --- !u!1001 &1055347216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19435,6 +19442,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3112439860108964669, guid: 1d3e9bc54618ba040bfab9f70e66d2f8, type: 3}
   m_PrefabInstance: {fileID: 1317328168}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1323258327 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1890188991804985784, guid: 3ef6c0fbc751e1d49983d4a7d2b0d122, type: 3}
+  m_PrefabInstance: {fileID: 1386752932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1329592079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19702,7 +19714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1890188991804985784, guid: 3ef6c0fbc751e1d49983d4a7d2b0d122, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5593914455722816914, guid: 3ef6c0fbc751e1d49983d4a7d2b0d122, type: 3}
       propertyPath: musicVolume

@@ -11,7 +11,8 @@ public class StartCutscene : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")){
-            musicManager.SetActive(false);
+            collision.gameObject.SetActive(false);
+            MusicManager.instance.GetComponent<AudioSource>().Stop();
             FXManager.SetActive(false);
             endingCutscene.SetActive(true);
         }

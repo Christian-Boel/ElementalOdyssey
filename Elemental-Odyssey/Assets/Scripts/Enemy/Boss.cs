@@ -52,9 +52,9 @@ public class Boss : Enemy, IAttackedPossible
     public override void Die()
     {
         key.SetActive(true);
-        base.Die();
         SoundFXManager.instance.PlaySoundFXClip(bossDeathSoundClip, transform, 0.8f);
         controllerList.ForEach(controller => { controller.active = false; });
+        base.Die();
     }
 
     private void CheckPhaseTransition()
