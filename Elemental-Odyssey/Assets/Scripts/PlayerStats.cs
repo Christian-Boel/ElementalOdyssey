@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,10 +15,16 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     public HealthBar healthBar;
     [SerializeField] private AudioClip playerDeathSoundClip;
 
+    public event Action OnStatsChanged;
+
     void Start()
     {
         healthBar = GameObject.FindGameObjectWithTag("Healthbar")?.GetComponent<HealthBar>();
-        while (!healthBar) healthBar = GameObject.FindGameObjectWithTag("Healthbar")?.GetComponent<HealthBar>();
+        if (!healthBar)
+        {
+            return;
+        }
+        // while (!healthBar) healthBar = GameObject.FindGameObjectWithTag("Healthbar")?.GetComponent<HealthBar>(); PSYCHO CODE
         UpdateHealthBar();
     }
 
