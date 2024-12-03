@@ -43,6 +43,11 @@ public class GameManager : MonoBehaviour
     {
         GameObject spawnPoint = GameObject.FindWithTag("PlayerSpawnPoint");
 
+        if (_player)
+        {
+            return;
+        }
+        
         if (spawnPoint != null)
         {
             _player = Instantiate(_playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);

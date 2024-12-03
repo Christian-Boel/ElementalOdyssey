@@ -15176,6 +15176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SceneTransitionManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4932438941163987035, guid: 1adc47a57ddf9481abe3309035c1d816, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9083244061686317855, guid: 1adc47a57ddf9481abe3309035c1d816, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.075325
