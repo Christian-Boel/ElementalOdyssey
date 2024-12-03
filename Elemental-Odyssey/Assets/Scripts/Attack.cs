@@ -22,6 +22,7 @@ public class Attack : MonoBehaviour, IStats
         playerMovement = GetComponent<Movement>();
         aaSpeed /= aaSpeedMultiplier;
         animator.UpdateAttackAnimationSpeed(aaSpeedMultiplier); 
+        UpdateStats();
     }
     void Update()
     {

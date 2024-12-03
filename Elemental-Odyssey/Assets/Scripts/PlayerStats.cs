@@ -10,7 +10,6 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     public float dashCD = 4; // Dash Cooldown
     public float dashLength = 0.1f; // Dash Length
     public HealthBar healthBar;
-    public GameObject player;
     [SerializeField] private AudioClip playerDeathSoundClip;
 
     void Start()
@@ -51,6 +50,12 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     {
         Debug.Log("Player has died!");
         // Du kan tilføje yderligere logik for genstart af spillet eller sceneskift
+    }
+
+    public void NewScene()
+    {
+        while (!healthBar) healthBar = GameObject.FindGameObjectWithTag("Healthbar")?.GetComponent<HealthBar>();
+        UpdateHealthBar();
     }
 
     public void UpdateHealthBar()

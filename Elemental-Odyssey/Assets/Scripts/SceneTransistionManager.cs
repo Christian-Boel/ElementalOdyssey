@@ -51,12 +51,12 @@ public class SceneTransitionManager : MonoBehaviour
         }
 
         // Wait for the new scene to finish loading
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(.1f);
         
         //SpawnPlayer
         GameManager.Instance.SpawnPlayer();
         
-        GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>().UpdateHealthBar();
+        GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>().NewScene();
 
         // Update player position in the new scene
         //UpdatePlayerPosition();

@@ -9,10 +9,6 @@ public class Movement : MonoBehaviour, IStats
     [SerializeField] private float dashDuration = 0.1f;     // Duration of dash in seconds
     [SerializeField] private float dashCooldown = 4f;     // Cooldown time between dashes
     [SerializeField] private AudioClip[] dashSoundClips;
-
-    private float currentMSSpeed;                           // Current movement speed (affected by upgrades)
-    private float currentDashCooldown;                      // Current dash cooldown (affected by upgrades)
-    private float currentDashDuration;
     
     private Rigidbody2D rb;
     private bool isDashing = false;
@@ -27,19 +23,6 @@ public class Movement : MonoBehaviour, IStats
     {
         rb = GetComponent<Rigidbody2D>();
         UpdateStats();
-        ResetStats(); // Initialize current stats based on base values
-    }
-
-    void ResetStats()
-    {
-        currentMSSpeed = MSSpeed;         // Reset to base speed
-        currentDashCooldown = dashCooldown; // Reset to base cooldown
-        currentDashDuration = dashDuration; // reset to base dash duration / length
-    }
-
-    public void ApplyUpgrade(Upgrade upgrade)
-    {
-        
     }
 
     void Update()
@@ -71,7 +54,7 @@ public class Movement : MonoBehaviour, IStats
 
         float attackSlowdown = attacking ? attackPenalty : 1f;
 
-        rb.velocity = currentMSSpeed * attackSlowdown * input;
+        rb.velocity = MSSpeed * attackSlowdown * input;
 
         // Store last move direction
         if (input != Vector2.zero)
@@ -98,12 +81,12 @@ public class Movement : MonoBehaviour, IStats
         }
 
         // Wait for the updated dash duration
-        yield return new WaitForSeconds(currentDashDuration);
+        yield return new WaitForSeconds(dashDuration);
 
         isDashing = false;
 
         // Wait for the current dash cooldown
-        yield return new WaitForSeconds(currentDashCooldown);
+        yield return new WaitForSeconds(dashCooldown);
 
         canDash = true;
     }
