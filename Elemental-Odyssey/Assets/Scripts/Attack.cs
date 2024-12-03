@@ -69,21 +69,4 @@ public class Attack : MonoBehaviour, IStats
         PlayerStats stats = GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>();
         attackDamage = stats.AD;
     }
-    
-    public void ApplyUpgrade(Upgrade upgrade)
-    {
-        switch (upgrade.upgradeType)
-        {
-            case UpgradeType.AttackDamage:
-                attackDamage += upgrade.value;
-                Debug.Log($"Attack damage increased by {upgrade.value}. New attack damage: {attackDamage}");
-                break;
-
-            // Tilføj flere opgraderingstyper her, hvis nødvendigt
-            default:
-                Debug.LogWarning($"Unhandled upgrade type: {upgrade.upgradeType}");
-                break;
-        }
-    }
-
 }

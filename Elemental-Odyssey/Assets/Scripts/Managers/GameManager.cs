@@ -145,25 +145,4 @@ public class GameManager : MonoBehaviour
         return _collectedKeys.Contains(keyType);
     }
     
-    private void SavePlayerStats()
-    {
-        if (_playerStats != null)
-        {
-            // Gem stats i GameManager
-            _playerStats.SaveStats();
-        }
-    }
-
-    private void RestorePlayerStats()
-    {
-        if (_playerStats != null)
-        {
-            _playerStats.RestoreStats();
-        }
-    }
-    public GameObject GetPlayer()
-    {
-        return _player;
-    }
-    
 }
