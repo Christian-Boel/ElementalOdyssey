@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,6 +12,8 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     public float dashLength = 0.1f; // Dash Length
     public HealthBar healthBar;
     [SerializeField] private AudioClip playerDeathSoundClip;
+
+    public event Action OnStatsChanged;
 
     void Start()
     {

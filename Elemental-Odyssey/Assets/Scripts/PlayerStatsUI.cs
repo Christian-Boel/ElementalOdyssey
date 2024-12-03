@@ -7,15 +7,27 @@ public class PlayerStatsUI : MonoBehaviour
     public TextMeshProUGUI playerStatsText; // Reference to the UI Text element for displaying stats
     private PlayerStats playerStats; // Reference to the PlayerStats script
 
-    void Update()
+    void Start()
     {
-        if (!playerStats)
+        playerStats = GameManager.Instance.GetComponent<PlayerStats>();
+        if (playerStats != null)
         {
-            playerStats = GameManager.Instance.GetComponent<PlayerStats>(); 
+            playerStats.OnStatsChanged += UpdateStatsDisplay;
+            UpdateStatsDisplay();
         }
-        UpdateStatsDisplay();
+        else
+        {
+            Debug.LogError("PlayerStats component not found on GameManager.");
+        }
     }
     
+    void OnDestroy()
+    {
+        if (playerStats != null)
+        {
+            playerStats.OnStatsChanged -= UpdateStatsDisplay;
+        }
+    }
     
     private void UpdateStatsDisplay()
     {
