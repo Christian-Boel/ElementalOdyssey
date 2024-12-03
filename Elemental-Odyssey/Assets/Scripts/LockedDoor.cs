@@ -1,8 +1,19 @@
+using TMPro;
 using UnityEngine;
 
 public class LockedDoor : MonoBehaviour
 {
     public KeyType requiredKey;
+    public GameObject textBox;
+    private TextMeshProUGUI textComp;
+
+
+    private void Start()
+    {
+        textComp = textBox.GetComponent<TextMeshProUGUI>();
+        textComp.text = "Sorry you are missing the " + requiredKey;
+        textBox.SetActive(false);
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -10,10 +21,17 @@ public class LockedDoor : MonoBehaviour
         {
             if (!GameManager.Instance.HasKey(requiredKey))
             {
-                Debug.Log("Door is locked. You need the " + requiredKey + " to unlock it.");
+                textBox.SetActive(true);
                 return;
             }
             UnlockDoor();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            textBox.SetActive(false);
         }
     }
 

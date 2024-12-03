@@ -9410,6 +9410,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Press WASD to Move
       objectReference: {fileID: 0}
+    - target: {fileID: 760392058592476515, guid: f8593524f0f183345a18955266045a58, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 95f818e0ce8eb984696759aa981b82ff, type: 2}
+    - target: {fileID: 760392058592476515, guid: f8593524f0f183345a18955266045a58, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3456956523197566803, guid: f8593524f0f183345a18955266045a58, type: 3}
       propertyPath: m_Name
       value: TextTrigger (1)
@@ -14405,6 +14413,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Press Space to Dash
       objectReference: {fileID: 0}
+    - target: {fileID: 760392058592476515, guid: f8593524f0f183345a18955266045a58, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 95f818e0ce8eb984696759aa981b82ff, type: 2}
+    - target: {fileID: 760392058592476515, guid: f8593524f0f183345a18955266045a58, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3456956523197566803, guid: f8593524f0f183345a18955266045a58, type: 3}
       propertyPath: m_Name
       value: TextTrigger (2)
@@ -15111,6 +15127,14 @@ PrefabInstance:
     - target: {fileID: 760392058592476515, guid: f8593524f0f183345a18955266045a58, type: 3}
       propertyPath: m_text
       value: Press LeftClick to Swing
+      objectReference: {fileID: 0}
+    - target: {fileID: 760392058592476515, guid: f8593524f0f183345a18955266045a58, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 95f818e0ce8eb984696759aa981b82ff, type: 2}
+    - target: {fileID: 760392058592476515, guid: f8593524f0f183345a18955266045a58, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3456956523197566803, guid: f8593524f0f183345a18955266045a58, type: 3}
       propertyPath: m_Name
