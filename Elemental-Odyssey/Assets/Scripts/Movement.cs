@@ -39,20 +39,7 @@ public class Movement : MonoBehaviour, IStats
 
     public void ApplyUpgrade(Upgrade upgrade)
     {
-        switch (upgrade.upgradeType)
-        {
-            case UpgradeType.MovementSpeed:
-                currentMSSpeed += upgrade.value;
-                break;
-
-            case UpgradeType.DashCooldown:
-                currentDashCooldown -= upgrade.value; // Reduce cooldown
-                break;
-            
-            case UpgradeType.DashLength:
-                currentDashDuration += upgrade.value; //increase dash length
-                break;
-        }
+        
     }
 
     void Update()

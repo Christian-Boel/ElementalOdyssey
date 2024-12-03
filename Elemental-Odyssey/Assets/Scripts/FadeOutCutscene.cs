@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,19 +11,27 @@ public class FadeOutCutscene : MonoBehaviour
 
     private Coroutine currentFadeCoroutine;
     private bool isOpaqueDelayActive = false;
+    private bool fadeComplete = true; // Tracks whether fading is complete
 
     void Update()
     {
         // Start fading in if fade is true and image is not fully opaque
         if (fade && imageToFade.color.a < 1f && currentFadeCoroutine == null)
         {
+            fadeComplete = false; // Fading process starts
             currentFadeCoroutine = StartCoroutine(FadeIn());
         }
         // Start fading out if fade is false and image is not fully transparent
         else if (!fade && imageToFade.color.a > 0f && currentFadeCoroutine == null && !isOpaqueDelayActive)
         {
+            fadeComplete = false; // Fading process starts
             currentFadeCoroutine = StartCoroutine(FadeOut());
         }
+    }
+
+    public bool IsFadeComplete()
+    {
+        return fadeComplete; // Returns whether fading is done
     }
 
     IEnumerator FadeIn()
@@ -39,12 +46,15 @@ public class FadeOutCutscene : MonoBehaviour
         {
             fade = false;
         }
+
+        fadeComplete = true; // Fade-in process is complete
     }
 
     IEnumerator FadeOut()
     {
         yield return StartCoroutine(FadeImage(0f)); // Fade to alpha = 0
-        currentFadeCoroutine = null;
+        fadeComplete = true; // Fade-out process is complete
+        currentFadeCoroutine = null; // Reset the coroutine tracker
     }
 
     IEnumerator FadeImage(float targetAlpha)

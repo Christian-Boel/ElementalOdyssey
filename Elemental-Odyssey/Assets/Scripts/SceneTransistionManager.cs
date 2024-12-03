@@ -7,7 +7,7 @@ public class SceneTransitionManager : MonoBehaviour
     public static SceneTransitionManager Instance { get; private set; }
 
     private bool _isTransitioning = false;
-    
+
     public FadeOutCutscene fadeOutCutscene;
 
     void Awake()
@@ -37,6 +37,12 @@ public class SceneTransitionManager : MonoBehaviour
     {
         _isTransitioning = true;
 
+        // Fade out effect before scene transition
+        if (fadeOutCutscene != null)
+        {
+            yield return new WaitUntil(() => fadeOutCutscene.IsFadeComplete());
+        }
+
         // Load the scene asynchronously
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
         while (!asyncLoad.isDone)
@@ -44,7 +50,35 @@ public class SceneTransitionManager : MonoBehaviour
             yield return null;
         }
 
-        if (!fadeOutCutscene) fadeOutCutscene = GameObject.Find("BlackoutCurtain").GetComponent<FadeOutCutscene>();
+        // Wait for the new scene to finish loading
+        yield return new WaitForSeconds(0.1f);
+        
+        //SpawnPlayer
+        GameManager.Instance.SpawnPlayer();
+        
+        GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>().UpdateHealthBar();
+
+        // Update player position in the new scene
+        //UpdatePlayerPosition();
+
         _isTransitioning = false;
+    }
+
+    private void UpdatePlayerPosition()
+    {
+        // Find the player object
+        GameObject player = GameManager.Instance?.GetPlayer();
+        if (player == null) return;
+
+        // Find the new spawn point in the scene
+        GameObject spawnPoint = GameObject.FindWithTag("PlayerSpawnPoint");
+        if (spawnPoint != null)
+        {
+            player.transform.position = spawnPoint.transform.position;
+        }
+        else
+        {
+            Debug.LogWarning("PlayerSpawnPoint not found in the new scene!");
+        }
     }
 }

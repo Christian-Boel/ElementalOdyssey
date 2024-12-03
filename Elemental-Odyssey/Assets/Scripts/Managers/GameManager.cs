@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void SpawnPlayer()
+    public void SpawnPlayer()
     {
         GameObject spawnPoint = GameObject.FindWithTag("PlayerSpawnPoint");
 
@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
             _player = Instantiate(_playerPrefab, Vector3.zero, Quaternion.identity);
         }
     }
+
 
     public void HandlePickup(Item item)
     {
@@ -98,9 +99,24 @@ public class GameManager : MonoBehaviour
         {
             Upgrade upgrade = item.upgrade; 
             Movement movement = _player.GetComponent<Movement>();
+            PlayerStats stats = GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>();
             if (movement != null)
             {
-                movement.ApplyUpgrade(upgrade);
+                switch (upgrade.upgradeType)
+                {
+                    case UpgradeType.MovementSpeed:
+                        stats.MS += upgrade.value;
+                        break;
+
+                    case UpgradeType.DashCooldown:
+                        stats.dashCD -= upgrade.value; // Reduce cooldown
+                        break;
+            
+                    case UpgradeType.DashLength:
+                        stats.dashLength += upgrade.value; //increase dash length
+                        break;
+                }
+                movement.UpdateStats();
                 Debug.Log($"Applied upgrade: {upgrade.upgradeType} with value {upgrade.value}");
             }
             
@@ -108,7 +124,8 @@ public class GameManager : MonoBehaviour
             Attack attack = _player.GetComponent<Attack>();
             if (attack != null && upgrade.upgradeType == UpgradeType.AttackDamage)
             {
-                attack.ApplyUpgrade(upgrade);
+                stats.AD += upgrade.value;
+                attack.UpdateStats();
                 return;
             }
         }
@@ -129,6 +146,27 @@ public class GameManager : MonoBehaviour
     public bool HasKey(KeyType keyType)
     {
         return _collectedKeys.Contains(keyType);
+    }
+    
+    private void SavePlayerStats()
+    {
+        if (_playerStats != null)
+        {
+            // Gem stats i GameManager
+            _playerStats.SaveStats();
+        }
+    }
+
+    private void RestorePlayerStats()
+    {
+        if (_playerStats != null)
+        {
+            _playerStats.RestoreStats();
+        }
+    }
+    public GameObject GetPlayer()
+    {
+        return _player;
     }
     
 }
