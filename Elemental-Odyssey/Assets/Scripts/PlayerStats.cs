@@ -18,7 +18,11 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     void Start()
     {
         healthBar = GameObject.FindGameObjectWithTag("Healthbar")?.GetComponent<HealthBar>();
-        while (!healthBar) healthBar = GameObject.FindGameObjectWithTag("Healthbar")?.GetComponent<HealthBar>();
+        if (!healthBar)
+        {
+            return;
+        }
+        // while (!healthBar) healthBar = GameObject.FindGameObjectWithTag("Healthbar")?.GetComponent<HealthBar>(); PSYCHO CODE
         UpdateHealthBar();
     }
 
