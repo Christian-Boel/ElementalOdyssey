@@ -24,7 +24,6 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
         {
             return;
         }
-        // while (!healthBar) healthBar = GameObject.FindGameObjectWithTag("Healthbar")?.GetComponent<HealthBar>(); PSYCHO CODE
         UpdateHealthBar();
     }
 
@@ -38,28 +37,22 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
     public void TakeDmg(float dmg)
     {
         currentHealth -= dmg;
-
-        if (healthBar)
-        {
-            healthBar.SetHealth(currentHealth, maxHealth);
-        }
-        else
-        {
-            Debug.LogWarning("Healthbar not found");
-        }
-
+        
+        UpdateHealthBar();
+    
         if (currentHealth <= 0)
         {
             SoundFXManager.instance?.PlaySoundFXClip(playerDeathSoundClip, transform, 1f);
             Die();
         }
+        
     }
     
     public void Die()
     {
         currentHealth = sceneStartHealth;
         Debug.Log("Player has died!");
-
+    
         // Genstart den aktuelle scene
         SceneTransitionManager.Instance.SwitchScene(SceneManager.GetActiveScene().name);
     }
@@ -78,6 +71,7 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
             Debug.Log(currentHealth + maxHealth);
             healthBar.SetHealth(currentHealth, maxHealth);
         }
+        OnStatsChanged?.Invoke();
     }
 
     public void SaveStats()
@@ -89,6 +83,7 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
         PlayerPrefs.SetFloat("MovementSpeed", MS);
         PlayerPrefs.SetFloat("DashCooldown", dashCD);
         PlayerPrefs.SetFloat("DashLength", dashLength);
+        UpdateHealthBar();
     }
 
     public void RestoreStats()

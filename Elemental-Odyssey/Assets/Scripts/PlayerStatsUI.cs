@@ -32,7 +32,7 @@ public class PlayerStatsUI : MonoBehaviour
     private void UpdateStatsDisplay()
     {
         playerStatsText.text = 
-            $"Health: {playerStats.currentHealth}/{playerStats.maxHealth}\n" +
+            $"Max Health: {playerStats.maxHealth}\n" +
             $"Attack Damage: {playerStats.AD}\n" +
             $"Movement Speed: {playerStats.MS}\n" +
             $"Dash Cooldown: {playerStats.dashCD}\n" +
