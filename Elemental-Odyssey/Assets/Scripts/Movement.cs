@@ -7,9 +7,13 @@ public class Movement : MonoBehaviour, IStats
     [SerializeField] private float MSSpeed = 5f;            // Normal movement speed
     [SerializeField] private float dashSpeed = 18f;         // Speed during dash
     [SerializeField] private float dashDuration = 0.1f;     // Duration of dash in seconds
-    [SerializeField] private float dashCooldown = 2.5f;       // Cooldown time between dashes
+    [SerializeField] private float dashCooldown = 4f;     // Cooldown time between dashes
     [SerializeField] private AudioClip[] dashSoundClips;
 
+    private float currentMSSpeed;                           // Current movement speed (affected by upgrades)
+    private float currentDashCooldown;                      // Current dash cooldown (affected by upgrades)
+    private float currentDashDuration;
+    
     private Rigidbody2D rb;
     private bool isDashing = false;
     private bool canDash = true;
@@ -23,6 +27,32 @@ public class Movement : MonoBehaviour, IStats
     {
         rb = GetComponent<Rigidbody2D>();
         UpdateStats();
+        ResetStats(); // Initialize current stats based on base values
+    }
+
+    void ResetStats()
+    {
+        currentMSSpeed = MSSpeed;         // Reset to base speed
+        currentDashCooldown = dashCooldown; // Reset to base cooldown
+        currentDashDuration = dashDuration; // reset to base dash duration / length
+    }
+
+    public void ApplyUpgrade(Upgrade upgrade)
+    {
+        switch (upgrade.upgradeType)
+        {
+            case UpgradeType.MovementSpeed:
+                currentMSSpeed += upgrade.value;
+                break;
+
+            case UpgradeType.DashCooldown:
+                currentDashCooldown -= upgrade.value; // Reduce cooldown
+                break;
+            
+            case UpgradeType.DashLength:
+                currentDashDuration += upgrade.value; //increase dash length
+                break;
+        }
     }
 
     void Update()
@@ -41,7 +71,6 @@ public class Movement : MonoBehaviour, IStats
         {
             // Apply dash velocity
             rb.velocity = dashDirection * dashSpeed;
-
             return; // Skip normal movement while dashing
         }
 
@@ -55,7 +84,7 @@ public class Movement : MonoBehaviour, IStats
 
         float attackSlowdown = attacking ? attackPenalty : 1f;
 
-        rb.velocity = MSSpeed * attackSlowdown * input;
+        rb.velocity = currentMSSpeed * attackSlowdown * input;
 
         // Store last move direction
         if (input != Vector2.zero)
@@ -81,13 +110,13 @@ public class Movement : MonoBehaviour, IStats
             dashDirection = dashDirection.normalized;
         }
 
-        // Wait for the dash duration
-        yield return new WaitForSeconds(dashDuration);
+        // Wait for the updated dash duration
+        yield return new WaitForSeconds(currentDashDuration);
 
         isDashing = false;
 
-        // Wait for the dash cooldown
-        yield return new WaitForSeconds(dashCooldown);
+        // Wait for the current dash cooldown
+        yield return new WaitForSeconds(currentDashCooldown);
 
         canDash = true;
     }
