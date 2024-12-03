@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour, IAttackedPossible
 {
-    public float maxHealth = 400;
+    public float maxHealth = 1000;
     public float currentHealth;
+    public float AD = 40;
+    public float MS = 5;
+    public float dashCD = 4;
+    public float dashLength = .1f;
     public HealthBar healthBar;
+    public GameObject player;
     [SerializeField] private AudioClip playerDeathSoundClip;
 
     void Start()

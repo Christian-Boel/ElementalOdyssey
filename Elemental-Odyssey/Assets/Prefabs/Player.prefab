@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 2441879968827253884}
   - component: {fileID: 8121938524132246118}
   - component: {fileID: 8199194135829847329}
-  - component: {fileID: 6915010313607650890}
   - component: {fileID: 5876024747918104709}
   - component: {fileID: 6404296739324120666}
   - component: {fileID: 1715996285787930596}
@@ -196,22 +195,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 325e0eb5a328d0449b33fe823c6b89d5, type: 3}
   attacking: 0
   attackPenalty: 0.3
---- !u!114 &6915010313607650890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5470954820853414628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c588d31654ad47a584271ee3a47818e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1000
-  currentHealth: 0
-  healthBar: {fileID: 0}
-  playerDeathSoundClip: {fileID: 8300000, guid: 699f2f2f8b9d8db46ab97f946940a7aa, type: 3}
 --- !u!50 &5876024747918104709
 Rigidbody2D:
   serializedVersion: 4

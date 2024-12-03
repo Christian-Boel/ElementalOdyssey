@@ -1,7 +1,8 @@
 using System.Collections;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Movement : MonoBehaviour, IStats
 {
     [SerializeField] private float MSSpeed = 5f;            // Normal movement speed
     [SerializeField] private float dashSpeed = 18f;         // Speed during dash
@@ -21,6 +22,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        UpdateStats();
     }
 
     void Update()
@@ -88,5 +90,13 @@ public class Movement : MonoBehaviour
         yield return new WaitForSeconds(dashCooldown);
 
         canDash = true;
+    }
+
+    public void UpdateStats()
+    {
+        PlayerStats stats = GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>();
+        MSSpeed = stats.MS;
+        dashCooldown = stats.dashCD;
+        dashDuration = stats.dashLength;
     }
 }

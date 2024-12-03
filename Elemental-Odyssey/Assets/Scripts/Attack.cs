@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Attack : MonoBehaviour
+public class Attack : MonoBehaviour, IStats
 {
     // Reference to the script containing the method to call
     private PlayerAnimations animator;
@@ -61,5 +61,11 @@ public class Attack : MonoBehaviour
 
         yield return new WaitForSeconds(aaCD);
         attackReady = true;
+    }
+
+    public void UpdateStats()
+    {
+        PlayerStats stats = GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>();
+        attackDamage = stats.AD;
     }
 }

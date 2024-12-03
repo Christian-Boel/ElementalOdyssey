@@ -12,6 +12,7 @@ TagManager:
   - Healthbar
   - Item
   - PlayerSpawnPoint
+  - Gamemanager
   layers:
   - Default
   - TransparentFX
