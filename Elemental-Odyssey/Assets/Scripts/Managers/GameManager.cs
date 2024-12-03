@@ -36,10 +36,7 @@ public class GameManager : MonoBehaviour
             SpawnPlayer();
         }
 
-        if (_player != null)
-        {
-            _playerStats = _player.GetComponent<PlayerStats>();
-        }
+        _playerStats = gameObject.GetComponent<PlayerStats>();
     }
 
     public void SpawnPlayer()

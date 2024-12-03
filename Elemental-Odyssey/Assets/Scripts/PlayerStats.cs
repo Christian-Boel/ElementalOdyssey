@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour, IAttackedPossible
 {
     public float maxHealth = 1000;
     public float currentHealth;
+    public float sceneStartHealth = 1000;
     public float AD = 40; // Attack Damage
     public float MS = 5; // Movement Speed
     public float dashCD = 4; // Dash Cooldown
@@ -52,15 +54,19 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
             Die();
         }
     }
-
+    
     public void Die()
     {
+        currentHealth = sceneStartHealth;
         Debug.Log("Player has died!");
-        // Du kan tilføje yderligere logik for genstart af spillet eller sceneskift
+
+        // Genstart den aktuelle scene
+        SceneTransitionManager.Instance.SwitchScene(SceneManager.GetActiveScene().name);
     }
 
     public void NewScene()
     {
+        sceneStartHealth = currentHealth;
         while (!healthBar) healthBar = GameObject.FindGameObjectWithTag("Healthbar")?.GetComponent<HealthBar>();
         UpdateHealthBar();
     }

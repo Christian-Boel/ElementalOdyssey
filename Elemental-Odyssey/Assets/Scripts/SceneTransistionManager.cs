@@ -33,7 +33,7 @@ public class SceneTransitionManager : MonoBehaviour
         }
     }
 
-    private IEnumerator TransitionToScene(string sceneName)
+    public IEnumerator TransitionToScene(string sceneName)
     {
         _isTransitioning = true;
 
