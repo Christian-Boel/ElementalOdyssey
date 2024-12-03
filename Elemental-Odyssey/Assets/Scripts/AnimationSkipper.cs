@@ -12,6 +12,9 @@ public class AnimationSkipper : MonoBehaviour
     private AnimationClip clip;                           // Reference to the animation clip
     private float clipLength;                             // Length of the clip in seconds
 
+
+    private bool playerDisables = false;
+
     void Start()
     {
         if (animator == null)
@@ -36,6 +39,11 @@ public class AnimationSkipper : MonoBehaviour
 
     void Update()
     {
+        // if (GameObject.FindGameObjectWithTag("Player") && !playerDisables)
+        // {
+        //     playerDisables = true;
+        //     GameObject.FindGameObjectWithTag("Player").transform.parent.gameObject.SetActive(false);
+        // }
         // Check for key input to trigger the skip
         if (Input.GetKeyDown(skipKey))
         {
