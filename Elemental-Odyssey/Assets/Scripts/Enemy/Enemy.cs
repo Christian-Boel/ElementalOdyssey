@@ -49,8 +49,12 @@ public class Enemy : MonoBehaviour, IAttackedPossible
             if (!player) return;
         }
 
+        if (hp <= 0)
+        {
+            return;
+        }
+        //movement
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        
         if (distanceToPlayer <= detectionRange && distanceToPlayer > stoppingDistance)
         {
             // Move towards the player

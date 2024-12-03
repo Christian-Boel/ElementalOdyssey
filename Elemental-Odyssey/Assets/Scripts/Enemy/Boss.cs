@@ -55,6 +55,7 @@ public class Boss : Enemy, IAttackedPossible
         SoundFXManager.instance.PlaySoundFXClip(bossDeathSoundClip, transform, 0.8f);
         controllerList.ForEach(controller => { controller.active = false; });
         base.Die();
+        MusicManager.instance.StopMusic();
     }
 
     private void CheckPhaseTransition()

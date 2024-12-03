@@ -3,5 +3,6 @@ public enum KeyType
     GrassKey,
     LavaKey,
     IceKey,
-    BossKey
+    BossKey,
+    TutorialKey
 }
