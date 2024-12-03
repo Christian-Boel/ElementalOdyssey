@@ -40,7 +40,7 @@ public class EnemyAttack : MonoBehaviour
         }
         Debug.Log("Player found");
         player = playerObject.transform;
-        playerStats = playerObject.GetComponentInParent<PlayerStats>();
+        playerStats = GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>();
         if (!player)
         {
             Debug.LogError("NO PLAYER FOUND");
