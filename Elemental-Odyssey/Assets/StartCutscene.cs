@@ -5,10 +5,15 @@ using UnityEngine;
 public class StartCutscene : MonoBehaviour
 {
     public GameObject endingCutscene;
+    public GameObject musicManager;
+    public GameObject FXManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("player")){
+        if (collision.CompareTag("Player")){
+            collision.gameObject.SetActive(false);
+            MusicManager.instance.GetComponent<AudioSource>().Stop();
+            FXManager.SetActive(false);
             endingCutscene.SetActive(true);
         }
 

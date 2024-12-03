@@ -19,6 +19,8 @@ public class Boss : Enemy, IAttackedPossible
 
     public List<SpikeController> controllerList; // Spike Controllers
 
+    public GameObject key;
+
 
     protected override void Start()
     {
@@ -49,9 +51,10 @@ public class Boss : Enemy, IAttackedPossible
 
     public override void Die()
     {
-        base.Die();
+        key.SetActive(true);
         SoundFXManager.instance.PlaySoundFXClip(bossDeathSoundClip, transform, 0.8f);
         controllerList.ForEach(controller => { controller.active = false; });
+        base.Die();
     }
 
     private void CheckPhaseTransition()
