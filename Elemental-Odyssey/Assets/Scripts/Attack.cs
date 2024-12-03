@@ -62,4 +62,21 @@ public class Attack : MonoBehaviour
         yield return new WaitForSeconds(aaCD);
         attackReady = true;
     }
+    
+    public void ApplyUpgrade(Upgrade upgrade)
+    {
+        switch (upgrade.upgradeType)
+        {
+            case UpgradeType.AttackDamage:
+                attackDamage += upgrade.value;
+                Debug.Log($"Attack damage increased by {upgrade.value}. New attack damage: {attackDamage}");
+                break;
+
+            // Tilføj flere opgraderingstyper her, hvis nødvendigt
+            default:
+                Debug.LogWarning($"Unhandled upgrade type: {upgrade.upgradeType}");
+                break;
+        }
+    }
+
 }

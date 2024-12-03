@@ -1,29 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    
-    private GameObject _player;
-    public GameObject _playerPrefab;
-    
-    private string _currentSceneName;
-    private bool _shouldSpawnPlayer = false;
-    private PlayerStats _playerStats;
-    private SceneTransitionManager sceneTransitionManager;
-    private HashSet<KeyType> _collectedKeys = new HashSet<KeyType>();
-    
+
+    private GameObject _player; // Reference til spillerobjektet
+    public GameObject _playerPrefab; // Prefab til spilleren
+
+    private string _currentSceneName; // Navn på den aktuelle scene
+    private PlayerStats _playerStats; // Reference til spillerens stats
+    private HashSet<KeyType> _collectedKeys = new HashSet<KeyType>(); // Samlede nøgler
+
     void Awake()
     {
-        Debug.Log("Awake");
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // Sørg for, at GameManager er persistent
         }
         else
         {
@@ -33,9 +28,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Start");
-        sceneTransitionManager = GetComponent<SceneTransitionManager>();
-
         _player = GameObject.FindGameObjectWithTag("Player");
         _currentSceneName = SceneManager.GetActiveScene().name;
 
@@ -44,18 +36,19 @@ public class GameManager : MonoBehaviour
             SpawnPlayer();
         }
 
-        _playerStats = _player.GetComponent<PlayerStats>();
+        if (_player != null)
+        {
+            _playerStats = _player.GetComponent<PlayerStats>();
+        }
     }
 
     private void SpawnPlayer()
     {
         GameObject spawnPoint = GameObject.FindWithTag("PlayerSpawnPoint");
-        
+
         if (spawnPoint != null)
         {
-            _player = Instantiate(_playerPrefab, 
-                spawnPoint.transform.position, 
-                spawnPoint.transform.rotation);
+            _player = Instantiate(_playerPrefab, spawnPoint.transform.position, spawnPoint.transform.rotation);
         }
         else
         {
@@ -74,6 +67,9 @@ public class GameManager : MonoBehaviour
             case ItemType.Key:
                 HandleKey(item);
                 break;
+            case ItemType.Upgrade:
+                HandleUpgrade(item);
+                break;
             default:
                 Debug.LogWarning("Unhandled item type: " + item.itemType);
                 break;
@@ -82,9 +78,11 @@ public class GameManager : MonoBehaviour
 
     private void HandleHealthPotion(Item item)
     {
-        int healAmount = item.healAmount;
-        _playerStats.Heal(healAmount);
-        Debug.Log("Picked up a health potion. Healed for " + healAmount);
+        if (_playerStats != null)
+        {
+            _playerStats.Heal(item.healAmount);
+            Debug.Log("Picked up a health potion. Healed for " + item.healAmount);
+        }
     }
 
     private void HandleKey(Item item)
@@ -92,6 +90,28 @@ public class GameManager : MonoBehaviour
         KeyType keyType = item.keyType;
         AddKey(keyType);
         Debug.Log("Picked up a key: " + keyType);
+    }
+
+    private void HandleUpgrade(Item item)
+    {
+        if (_player != null)
+        {
+            Upgrade upgrade = item.upgrade; 
+            Movement movement = _player.GetComponent<Movement>();
+            if (movement != null)
+            {
+                movement.ApplyUpgrade(upgrade);
+                Debug.Log($"Applied upgrade: {upgrade.upgradeType} with value {upgrade.value}");
+            }
+            
+            // Check for Attack upgrades
+            Attack attack = _player.GetComponent<Attack>();
+            if (attack != null && upgrade.upgradeType == UpgradeType.AttackDamage)
+            {
+                attack.ApplyUpgrade(upgrade);
+                return;
+            }
+        }
     }
     
     public void AddKey(KeyType keyType)
@@ -110,5 +130,5 @@ public class GameManager : MonoBehaviour
     {
         return _collectedKeys.Contains(keyType);
     }
-
+    
 }

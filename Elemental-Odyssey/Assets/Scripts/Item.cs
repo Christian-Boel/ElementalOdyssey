@@ -10,4 +10,6 @@ public class Item : MonoBehaviour
     public int healAmount;
     
     public KeyType keyType;
+    
+    public Upgrade upgrade;
 }
