@@ -14,12 +14,14 @@ public class EnemySpawner : MonoBehaviour
     public float respawnDelay = 5f;     // Delay between enemy death and respawn
     public bool isActive = true;
     
-    private List<Enemy> spawnedEnemies = new List<Enemy>(); // List to keep track of spawned enemies
+    public List<Enemy> spawnedEnemies = new List<Enemy>(); // List to keep track of spawned enemies
     private bool playerInRange = false;
     private Coroutine spawnCoroutine;
     private Coroutine despawnCoroutine;
     private int pendingRespawns = 0;    // Count of enemies scheduled to respawn
     private bool hasSpawnedInitialEnemies = false; // Tracks if initial enemies have been spawned
+    private int totalEnemiesDefeated = 0;
+    public bool allEnemiesDefeated { get; private set; } = false;
 
     void Start()
     {
@@ -150,6 +152,12 @@ public class EnemySpawner : MonoBehaviour
     public void OnEnemyDeath(Enemy enemy)
     {
         spawnedEnemies.Remove(enemy);
+        totalEnemiesDefeated++;
+
+        if (hasSpawnedInitialEnemies && totalEnemiesDefeated >= maxEnemies)
+        {
+            allEnemiesDefeated = true;
+        }
 
         if (shouldRespawn && playerInRange)
         {

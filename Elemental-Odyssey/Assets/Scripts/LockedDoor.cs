@@ -11,7 +11,7 @@ public class LockedDoor : MonoBehaviour
     private void Start()
     {
         textComp = textBox.GetComponent<TextMeshProUGUI>();
-        textComp.text = "Sorry you are missing the " + requiredKey;
+        textComp.text = "Find the " + requiredKey + " to continue!";
         textBox.SetActive(false);
     }
 

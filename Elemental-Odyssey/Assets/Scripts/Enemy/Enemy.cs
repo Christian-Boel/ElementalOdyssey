@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
     private SpriterAnimationController spriter;
     [SerializeField] private AudioClip hurtSound;
     [SerializeField] private AudioClip battleMusicClip;
+    public System.Action<Enemy> OnEnemyDefeated;
 
     protected virtual void Start()
     {
@@ -136,6 +137,7 @@ public class Enemy : MonoBehaviour, IAttackedPossible
     public virtual void Die()
     {
         Debug.Log("Enemy died");
+        OnEnemyDefeated?.Invoke(this);
         spriter.PlayAnimation("DIE");
         StartCoroutine(DespawnObject());
     }

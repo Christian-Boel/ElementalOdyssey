@@ -1116,11 +1116,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useAoEDamage: 1
   useDirectAttack: 1
-  aoeDamageAmount: 40
+  aoeDamageAmount: 10
   aoeDamageInterval: 0.5
   aoeRange: 2.5
-  attackDamageAmount: 150
-  attackCooldown: 4
+  attackDamageAmount: 60
+  attackCooldown: 3
   attackRange: 2.2
   player: {fileID: 0}
   playerStats: {fileID: 0}
