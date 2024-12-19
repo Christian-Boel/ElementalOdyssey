@@ -295,6 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b1a518b20cdd1141a4e688b7e089c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpCanvas: {fileID: 3933328352877999466, guid: 65b7066eb73b4f8428ea43668a523aa4, type: 3}
 --- !u!70 &3552736324907079652
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

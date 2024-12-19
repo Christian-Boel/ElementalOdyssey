@@ -52,7 +52,7 @@ MonoBehaviour:
   keyType: 0
   upgrade:
     upgradeType: 2
-    value: 15
+    value: 10
 --- !u!60 &9162137735824407541
 PolygonCollider2D:
   m_ObjectHideFlags: 0
