@@ -182,6 +182,13 @@ public class EnemySpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(despawnDelay);
 
+        // Count despawned enemies as defeated
+        totalEnemiesDefeated += spawnedEnemies.Count;
+        if (hasSpawnedInitialEnemies && totalEnemiesDefeated >= maxEnemies)
+        {
+            allEnemiesDefeated = true;
+        }
+
         // Destroy all spawned enemies
         foreach (Enemy enemy in spawnedEnemies)
         {
