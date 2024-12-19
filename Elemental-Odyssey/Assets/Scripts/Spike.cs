@@ -61,7 +61,7 @@ public class Spike : MonoBehaviour
         if (other.CompareTag("Player") && !damaged)
         {
             damaged = true;
-            other.GetComponent<HitDetection>().Hit(dmg);
+            GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>().TakeDmg(dmg);
         }
     }
 }
