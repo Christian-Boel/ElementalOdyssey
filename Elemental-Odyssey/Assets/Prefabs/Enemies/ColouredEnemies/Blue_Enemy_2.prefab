@@ -1015,10 +1015,11 @@ MonoBehaviour:
   speed: 4
   detectionRange: 6.5
   stoppingDistance: 1.5
-  maxHp: 30
-  hp: 140
+  maxHp: 120
+  hp: 120
   spawner: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
+  battleMusicClip: {fileID: 0}
 --- !u!114 &3854867375773415565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1039,6 +1040,8 @@ MonoBehaviour:
   attackDamageAmount: 50
   attackCooldown: 2
   attackRange: 1.5
+  player: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!70 &2984525744342046612
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -54,9 +54,15 @@ public class SceneTransitionManager : MonoBehaviour
         yield return new WaitForSeconds(.1f);
         
         //SpawnPlayer
-        GameManager.Instance.SpawnPlayer();
+        if(sceneName != "Main Menu")
+        {
+            GameManager.Instance.SpawnPlayer();
+
+            GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>().NewScene();
+            fadeOutCutscene = GameObject.Find("BlackoutCurtain").GetComponent<FadeOutCutscene>();
+        }
+            
         
-        GameObject.FindGameObjectWithTag("Gamemanager").GetComponent<PlayerStats>().NewScene();
 
         // Update player position in the new scene
         //UpdatePlayerPosition();

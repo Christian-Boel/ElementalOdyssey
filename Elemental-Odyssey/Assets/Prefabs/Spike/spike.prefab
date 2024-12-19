@@ -105,7 +105,7 @@ MonoBehaviour:
   reactionTime: 1
   spikeTime: 0.5
   spikeUpTime: 1
-  dmg: 50
+  dmg: 20
 --- !u!95 &5779856085571689797
 Animator:
   serializedVersion: 5

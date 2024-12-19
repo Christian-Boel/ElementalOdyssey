@@ -558,6 +558,7 @@ MonoBehaviour:
   hp: 250
   spawner: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
+  battleMusicClip: {fileID: 0}
 --- !u!70 &-3317984606843891960
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -640,6 +641,8 @@ MonoBehaviour:
   attackDamageAmount: 50
   attackCooldown: 2.5
   attackRange: 1.5
+  player: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!1 &4868973337955729317
 GameObject:
   m_ObjectHideFlags: 0

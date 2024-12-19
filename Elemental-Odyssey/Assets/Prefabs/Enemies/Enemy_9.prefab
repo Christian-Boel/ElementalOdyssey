@@ -802,6 +802,7 @@ MonoBehaviour:
   hp: 300
   spawner: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
+  battleMusicClip: {fileID: 0}
 --- !u!70 &3180848285883144416
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

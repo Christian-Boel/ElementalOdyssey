@@ -52,7 +52,7 @@ MonoBehaviour:
   keyType: 0
   upgrade:
     upgradeType: 1
-    value: 1
+    value: 0.8
 --- !u!212 &6661490243868964543
 SpriteRenderer:
   m_ObjectHideFlags: 0

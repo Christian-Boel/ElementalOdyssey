@@ -6,7 +6,7 @@ public class DestroyObject : MonoBehaviour
 {
     [SerializeField] private string targetSceneName;
     public GameObject player;
-    public bool sceneChange = false;
+    public bool sceneChange = true;
     void Start()
     {
         if(player) player.SetActive(true);

@@ -1035,10 +1035,11 @@ MonoBehaviour:
   speed: 3
   detectionRange: 6.5
   stoppingDistance: 1.5
-  maxHp: 150
-  hp: 150
+  maxHp: 200
+  hp: 200
   spawner: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: 5e581d93ac936f14bba0033f03032a92, type: 3}
+  battleMusicClip: {fileID: 0}
 --- !u!70 &6714913131717451104
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1115,12 +1116,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   useAoEDamage: 1
   useDirectAttack: 1
-  aoeDamageAmount: 40
+  aoeDamageAmount: 10
   aoeDamageInterval: 0.5
   aoeRange: 2.5
-  attackDamageAmount: 150
+  attackDamageAmount: 80
   attackCooldown: 4
   attackRange: 2.2
+  player: {fileID: 0}
+  playerStats: {fileID: 0}
 --- !u!74 &-8321092890255158807
 AnimationClip:
   m_ObjectHideFlags: 0

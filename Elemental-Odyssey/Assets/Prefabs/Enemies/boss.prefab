@@ -1733,6 +1733,7 @@ MonoBehaviour:
   evilLaughSoundClip: {fileID: 0}
   bossDeathSoundClip: {fileID: 0}
   controllerList: []
+  key: {fileID: 0}
 --- !u!114 &6867689183835329905
 MonoBehaviour:
   m_ObjectHideFlags: 0
