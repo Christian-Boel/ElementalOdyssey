@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
                 Debug.LogWarning("Unhandled item type: " + item.itemType);
                 break;
         }
+        _playerStats.updateUI();
     }
 
     private void HandleHealthPotion(Item item)

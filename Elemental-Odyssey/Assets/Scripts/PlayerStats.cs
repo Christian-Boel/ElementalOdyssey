@@ -71,6 +71,11 @@ public class PlayerStats : MonoBehaviour, IAttackedPossible
             Debug.Log(currentHealth + maxHealth);
             healthBar.SetHealth(currentHealth, maxHealth);
         }
+        updateUI();
+    }
+
+    public void updateUI()
+    {
         OnStatsChanged?.Invoke();
     }
 }
