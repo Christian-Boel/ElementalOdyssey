@@ -552,7 +552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
-  detectionRange: 10
+  detectionRange: 6
   stoppingDistance: 1.5
   maxHp: 300
   hp: 300

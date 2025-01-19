@@ -1,9 +1,10 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
-    private bool pickedUp = false;
+    private bool cd = false;
     public GameObject pickUpCanvas;
     private void Start()
     {
@@ -12,15 +13,15 @@ public class PickupItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collision.CompareTag("Item"))
+        if (!collision.CompareTag("Item") || cd)
         {
             return;
         }
-
+        cd = true;
+        StartCoroutine(CooldownDelay(.5f));
         Item item = collision.GetComponent<Item>();
-        if (item != null && !pickedUp)
+        if (item != null)
         {
-            pickedUp = true;
             GameManager.Instance.HandlePickup(item);
             SoundFXManager.instance.PlaySoundFXClip(item.ItemSoundClip, transform, 0.5f);
             Destroy(collision.gameObject);
@@ -34,6 +35,13 @@ public class PickupItem : MonoBehaviour
         {
             Debug.LogError("Picked up an item without an Item component.");
         }
-        pickedUp = false;
+        cd = false;
+    }
+
+    private IEnumerator CooldownDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        cd = false;
     }
 }

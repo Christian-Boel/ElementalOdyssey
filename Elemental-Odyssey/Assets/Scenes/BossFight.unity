@@ -8808,7 +8808,7 @@ Tilemap:
       - {fileID: 1886595998, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: 1866793535, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: -667426111, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 2, y: 25, z: 0}
@@ -8906,7 +8906,7 @@ Tilemap:
       - {fileID: -1968067830, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: 1314620151, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: 1731560625, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-      m_AnimationSpeed: 6
+      m_AnimationSpeed: 6.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 0, y: 27, z: 0}
@@ -8920,7 +8920,7 @@ Tilemap:
       - {fileID: 1886595998, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: 1866793535, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
       - {fileID: -667426111, guid: 53de73f147a6d4c489c1ceeb81bfda73, type: 3}
-      m_AnimationSpeed: 6.0000005
+      m_AnimationSpeed: 6
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: 1, y: 27, z: 0}
@@ -18270,6 +18270,18 @@ PrefabInstance:
     - target: {fileID: 4715307727280500047, guid: cabf02151526b4cdd96d95c02a3d1aeb, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113394321165543499, guid: cabf02151526b4cdd96d95c02a3d1aeb, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113394321165543499, guid: cabf02151526b4cdd96d95c02a3d1aeb, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113394321165543499, guid: cabf02151526b4cdd96d95c02a3d1aeb, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 9187565752583410252, guid: cabf02151526b4cdd96d95c02a3d1aeb, type: 3}
       propertyPath: m_Pivot.x
